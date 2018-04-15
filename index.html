@@ -309,6 +309,192 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tryanswer.github.io/2018/04/14/programmers-pwd/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Moz">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/327937?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Moz-归零">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/14/programmers-pwd/" itemprop="url">程序员密码</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-14T21:14:04+08:00">
+                2018-04-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/游戏/" itemprop="url" rel="index">
+                    <span itemprop="name">游戏</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/游戏/程序员密码/" itemprop="url" rel="index">
+                    <span itemprop="name">程序员密码</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/04/14/programmers-pwd/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/04/14/programmers-pwd/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/04/14/programmers-pwd/" class="leancloud_visitors" data-flag-title="程序员密码">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>这几天在<a href="https://www.v2ex.com/t/445123" target="_blank" rel="noopener">V2EX</a>上看到一个面向程序员的小游戏——在网页中找到一个隐藏的密码即可过关。游戏目前总共有两个level, level1有10道题，level2有5道题。游戏规则虽然简单，但是想要过关还是需要掌握不少知识，比如：’Chrome Developer Tools’工具使用、Baes64解码、图片隐写术等等。<br>游戏挺有意思的，在这里记录下，写者无心，读者请闭眼。</p>
+<h2 id="Level1"><a href="#Level1" class="headerlink" title="Level1"></a>Level1</h2><p>进入游戏只有一个密码输入框，第一反应是打开开发者工具，寻找蛛丝马迹。通过细心观察，果然发现<code>Console</code>有信息打印，并且对源码进一步分析，游戏核心代码在<code>js/app/level.js</code>文件里。<code>level.js</code>粗略看下来，主要包含两部分重要信息：关卡通过对玩家输入的密码进行<code>md5</code>加密验证以及每个关卡执行的函数(存放在<code>LevelManager.prototype.levels</code>数组里)。<br>总体分析下来，得到的信息如下：<br>1）Console有信息提示<br>2）每个关卡的触发函数<br>3）md5加密</p>
+<h3 id="level1-0"><a href="#level1-0" class="headerlink" title="level1-0"></a>level1-0</h3><p>密码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello, world!</span><br></pre></td></tr></table></figure></p>
+<h3 id="level1-1"><a href="#level1-1" class="headerlink" title="level1-1"></a>level1-1</h3><p>对<code>Console</code>打印的信息进行Base64解码 (为啥会想到Base64？因为字符最后的<code>=</code>号)<br>密码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I&apos;m a programmer.</span><br></pre></td></tr></table></figure></p>
+<h3 id="level1-2"><a href="#level1-2" class="headerlink" title="level1-2"></a>level1-2</h3><p>对<code>cGluZyB3d3cucHJvZ3JhbW1lcnBhc3N3b3JkLmNvbQ==</code>进行Base64解码，得到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping www.programmerpassword.com</span><br></pre></td></tr></table></figure></p>
+<p>进而在终端执行ping，获取ip地址<br>密码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">47.104.152.148</span><br></pre></td></tr></table></figure></p>
+<h3 id="level1-3"><a href="#level1-3" class="headerlink" title="level1-3"></a>level1-3</h3><p>本关卡没有在<code>Console</code>里打印信息，但是通过对关卡函数分析，本关卡在页面上插入了一段<code>html</code>代码，并且设置了透明样式。<br>密码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">密码是123456</span><br></pre></td></tr></table></figure></p>
+<h3 id="level1-4"><a href="#level1-4" class="headerlink" title="level1-4"></a>level1-4</h3><p><code>Console</code>打印了一串数字，使用<code>String.fromCharCode()</code>将十六进制整数转ascii码。<br>密码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Bug running</span><br></pre></td></tr></table></figure></p>
+<h3 id="level1-5"><a href="#level1-5" class="headerlink" title="level1-5"></a>level1-5</h3><p>本关卡在页面上插入了一段<code>html</code>代码，只显示了一个<code>#</code>。开始以为是和<code>jQuery</code>的id选择器有关，结果答案却是<code>#</code>文字的RGB颜色值。<br>密码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#2f4584</span><br></pre></td></tr></table></figure></p>
+<h3 id="level1-6"><a href="#level1-6" class="headerlink" title="level1-6"></a>level1-6</h3><p>图片的Base64编码，需要添加头部<code>data:image/jpeg;</code>。<br>密码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">463700</span><br></pre></td></tr></table></figure></p>
+<h3 id="level1-7"><a href="#level1-7" class="headerlink" title="level1-7"></a>level1-7</h3><p>访问<code>img.src</code>指定的url。<br>密码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">better to miss than to meet</span><br></pre></td></tr></table></figure></p>
+<h3 id="level1-8"><a href="#level1-8" class="headerlink" title="level1-8"></a>level1-8</h3><p>在<code>Console</code>里输入<code>window.getPassword(&quot;H4sIAAAAAAAAC7MPcHq2ZWH987ndEfYA5w4bAwwAAAA=&quot;)</code><br>密码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">25LTQWMP9Y</span><br></pre></td></tr></table></figure></p>
+<h3 id="level1-9"><a href="#level1-9" class="headerlink" title="level1-9"></a>level1-9</h3><p>最坑爹的关卡，以为密码会隐藏在给出的PHP代码里，然而并不是。将图片下载下来，然后使用十六进制编辑器打开图片，从jpg图片附加信息里可找到<code>cd /data/log/../www/; pwd</code>。<br>密码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/data/www</span><br></pre></td></tr></table></figure></p>
+<h2 id="Level2"><a href="#Level2" class="headerlink" title="Level2"></a>Level2</h2><h3 id="level2-0"><a href="#level2-0" class="headerlink" title="level2-0"></a>level2-0</h3><h3 id="level2-1"><a href="#level2-1" class="headerlink" title="level2-1"></a>level2-1</h3><h3 id="level2-2"><a href="#level2-2" class="headerlink" title="level2-2"></a>level2-2</h3><h3 id="level2-3"><a href="#level2-3" class="headerlink" title="level2-3"></a>level2-3</h3><h3 id="level2-4"><a href="#level2-4" class="headerlink" title="level2-4"></a>level2-4</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://tryanswer.github.io/2018/04/13/n23-merge-k-sorted-lists/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -523,7 +709,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -534,7 +720,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -545,7 +731,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
