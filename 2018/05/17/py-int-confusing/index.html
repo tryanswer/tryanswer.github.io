@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="Moz的博客">
 <meta property="og:description" content="分析以下代码的执行结果 123456789101112131415161718192021#!/usr/bin/env python3# coding: utf-8a = 256b = 256c = 257d = 257def foo():	e = 256	f = 257	g = 257	print(&apos;a is b&apos;, a is b)	print(&apos;c is d&apos;, c is d)	print(&apos;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-20T12:55:12.468Z">
+<meta property="og:updated_time" content="2018-05-20T13:17:11.952Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 小整数与大整数的处理机制以及整体解释与逐行解释的区别">
 <meta name="twitter:description" content="分析以下代码的执行结果 123456789101112131415161718192021#!/usr/bin/env python3# coding: utf-8a = 256b = 256c = 257d = 257def foo():	e = 256	f = 257	g = 257	print(&apos;a is b&apos;, a is b)	print(&apos;c is d&apos;, c is d)	print(&apos;">
@@ -417,7 +417,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,591
+                  1,589
                 </span>
               
 
@@ -473,9 +473,9 @@
 <h3 id="小整数与大整数"><a class="header-anchor" href="#小整数与大整数">¶</a>小整数与大整数</h3>
 <p>学过<code>java</code>的都知道，在<code>JDK5</code>中，为<code>Integer</code>的操作引入了一个新的特性，用来节省内存和提高性能。<code>[-128, 127]</code>之间的整形对象在内部实现中通过使用相同的对象引用实现了缓存和重用。为什么对这个区间范围的整数进行缓存？主要是因为这个范围的整数值使用最广泛（<code>JDK6</code>之后可以通过<code>jvm</code>启动参数设置最大值）。</p>
 <p>在<code>Python</code>中，同样采用了类似的整形缓存机制。<code>Python</code>将整数的定义细分为小整数和大整数，前者整数值范围为<code>[-5, 257)</code>，其余整数为后者。</p>
-<h5 id="1-小整数对象缓存池"><a class="header-anchor" href="#1-小整数对象缓存池">¶</a>1. 小整数对象缓存池</h5>
+<h5 id="小整数对象缓存池"><a class="header-anchor" href="#小整数对象缓存池">¶</a>小整数对象缓存池</h5>
 <p><code>Python</code>将小整数缓存到一个特定的<code>small_ints</code>链表中，该链表会存在于<code>Python</code>解释器的整个生命周期，当需要使用小整数时，就去该链表中获取。简单来说，<strong>小整数对象会在Python全局解析器范围内被重复引用，且永远不会被GC回收</strong>。</p>
-<h5 id="2-通用整数对象缓存池"><a class="header-anchor" href="#2-通用整数对象缓存池">¶</a>2. 通用整数对象缓存池</h5>
+<h5 id="通用整数对象缓存池"><a class="header-anchor" href="#通用整数对象缓存池">¶</a>通用整数对象缓存池</h5>
 <p><code>Python</code>运行环境会为大整数对象分配一定的缓存内存空间，该内存空间会被大整数对象轮流使用，直到占满为止，再继续则开辟一块新的内存空间。通过分析<code>Python</code>源码可知，通用整数对象缓存池的结构体定义如下：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> _<span class="title">intblock</span> &#123;</span>  </span><br><span class="line">    <span class="class"><span class="keyword">struct</span> _<span class="title">intblock</span> *<span class="title">next</span>;</span>  </span><br><span class="line">    PyIntObject objects[N_INTOBJECTS];  </span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">intblock</span> <span class="title">PyIntBlock</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> PyIntBlock *block_list = <span class="literal">NULL</span>;  </span><br><span class="line"><span class="keyword">static</span> PyIntObject *free_list = <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
 <p><code>PyIntBlock</code>结构体定义了一个<code>PyIntObject</code>数组和指向下一个<code>PyIntBlock</code>结构的指针<code>*next</code>。每个block大约可以存放82个<code>PyIntObject</code>。<code>block_list</code>用于维护分配给<code>PyIntObject</code>所有的内存空间，<code>free_list</code>则用于维护<code>PyIntObject</code>可用的剩余内存空间。</p>
@@ -733,7 +733,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#小整数与大整数"><span class="nav-number">1.</span> <span class="nav-text">¶小整数与大整数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-小整数对象缓存池"><span class="nav-number">1.0.1.</span> <span class="nav-text">¶1. 小整数对象缓存池</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-通用整数对象缓存池"><span class="nav-number">1.0.2.</span> <span class="nav-text">¶2. 通用整数对象缓存池</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整体解释与逐行解释"><span class="nav-number">2.</span> <span class="nav-text">¶整体解释与逐行解释</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#小整数与大整数"><span class="nav-number">1.</span> <span class="nav-text">¶小整数与大整数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#小整数对象缓存池"><span class="nav-number">1.0.1.</span> <span class="nav-text">¶小整数对象缓存池</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#通用整数对象缓存池"><span class="nav-number">1.0.2.</span> <span class="nav-text">¶通用整数对象缓存池</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整体解释与逐行解释"><span class="nav-number">2.</span> <span class="nav-text">¶整体解释与逐行解释</span></a></li></ol></div>
             
 
           </div>
