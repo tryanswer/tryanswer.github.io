@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="Hash,字符串," />
+  <meta name="keywords" content="小整数,大整数,整数缓存," />
 
 
 
@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="LeetCode第30题 ¶问题描述 给定一个字符串 s 和一些长度相同的单词 **words。**在 s 中找出可以恰好串联 words 中所有单词的子串的起始位置。 注意子串要与 words 中的单词完全匹配，中间不能有其他字符，但不需要考虑 words 中单词串联的顺序。 示例 1: 123456输入:  s = &amp;quot;barfoothefoobarman&amp;quot;,  words">
-<meta name="keywords" content="Hash,字符串">
+<meta name="description" content="分析以下代码的执行结果 123456789101112131415161718192021#!/usr/bin/env python3# coding: utf-8a = 256b = 256c = 257d = 257def foo():	e = 256	f = 257	g = 257	print(&apos;a is b&apos;, a is b)	print(&apos;c is d&apos;, c is d)	print(&apos;">
+<meta name="keywords" content="小整数,大整数,整数缓存">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode30 与所有单词相关联的字串">
-<meta property="og:url" content="https://tryanswer.github.io/2018/05/03/n30-substring-with-concatenation-of-all-words/index.html">
+<meta property="og:title" content="Python 小整数与大整数的处理机制以及整体解释与逐行解释的区别">
+<meta property="og:url" content="https://tryanswer.github.io/2018/05/17/py-int-confusing/index.html">
 <meta property="og:site_name" content="Moz的博客">
-<meta property="og:description" content="LeetCode第30题 ¶问题描述 给定一个字符串 s 和一些长度相同的单词 **words。**在 s 中找出可以恰好串联 words 中所有单词的子串的起始位置。 注意子串要与 words 中的单词完全匹配，中间不能有其他字符，但不需要考虑 words 中单词串联的顺序。 示例 1: 123456输入:  s = &amp;quot;barfoothefoobarman&amp;quot;,  words">
+<meta property="og:description" content="分析以下代码的执行结果 123456789101112131415161718192021#!/usr/bin/env python3# coding: utf-8a = 256b = 256c = 257d = 257def foo():	e = 256	f = 257	g = 257	print(&apos;a is b&apos;, a is b)	print(&apos;c is d&apos;, c is d)	print(&apos;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-20T12:55:36.063Z">
+<meta property="og:updated_time" content="2018-05-20T12:55:12.468Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode30 与所有单词相关联的字串">
-<meta name="twitter:description" content="LeetCode第30题 ¶问题描述 给定一个字符串 s 和一些长度相同的单词 **words。**在 s 中找出可以恰好串联 words 中所有单词的子串的起始位置。 注意子串要与 words 中的单词完全匹配，中间不能有其他字符，但不需要考虑 words 中单词串联的顺序。 示例 1: 123456输入:  s = &amp;quot;barfoothefoobarman&amp;quot;,  words">
+<meta name="twitter:title" content="Python 小整数与大整数的处理机制以及整体解释与逐行解释的区别">
+<meta name="twitter:description" content="分析以下代码的执行结果 123456789101112131415161718192021#!/usr/bin/env python3# coding: utf-8a = 256b = 256c = 257d = 257def foo():	e = 256	f = 257	g = 257	print(&apos;a is b&apos;, a is b)	print(&apos;c is d&apos;, c is d)	print(&apos;">
 
 
 
@@ -129,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="https://tryanswer.github.io/2018/05/03/n30-substring-with-concatenation-of-all-words/"/>
+  <link rel="canonical" href="https://tryanswer.github.io/2018/05/17/py-int-confusing/"/>
 
 
 
 
 
-  <title>LeetCode30 与所有单词相关联的字串 | Moz的博客</title>
+  <title>Python 小整数与大整数的处理机制以及整体解释与逐行解释的区别 | Moz的博客</title>
   
 
 
@@ -302,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tryanswer.github.io/2018/05/03/n30-substring-with-concatenation-of-all-words/">
+    <link itemprop="mainEntityOfPage" href="https://tryanswer.github.io/2018/05/17/py-int-confusing/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Moz">
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode30 与所有单词相关联的字串</h1>
+          <h1 class="post-title" itemprop="name headline">Python 小整数与大整数的处理机制以及整体解释与逐行解释的区别</h1>
         
 
         <div class="post-meta">
@@ -331,8 +331,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-03T22:46:38+08:00">
-                2018-05-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-17T22:25:10+08:00">
+                2018-05-17
               </time>
             
 
@@ -354,8 +354,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -365,8 +365,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
+                  <a href="/categories/Python/你不知道的Python/" itemprop="url" rel="index">
+                    <span itemprop="name">你不知道的Python</span>
                   </a>
                 </span>
 
@@ -383,8 +383,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/03/n30-substring-with-concatenation-of-all-words/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/03/n30-substring-with-concatenation-of-all-words/" itemprop="commentCount"></span>
+                <a href="/2018/05/17/py-int-confusing/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/17/py-int-confusing/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -392,7 +392,7 @@
 
           
           
-             <span id="/2018/05/03/n30-substring-with-concatenation-of-all-words/" class="leancloud_visitors" data-flag-title="LeetCode30 与所有单词相关联的字串">
+             <span id="/2018/05/17/py-int-confusing/" class="leancloud_visitors" data-flag-title="Python 小整数与大整数的处理机制以及整体解释与逐行解释的区别">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -417,7 +417,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  828
+                  1,591
                 </span>
               
 
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  6
                 </span>
               
             </div>
@@ -454,25 +454,56 @@
       
 
       
-        <p><a href="https://leetcode-cn.com/problems/substring-with-concatenation-of-all-words/description/" target="_blank" rel="noopener">LeetCode第30题</a></p>
-<h3 id="问题描述"><a class="header-anchor" href="#问题描述">¶</a>问题描述</h3>
-<p>给定一个字符串 <strong>s</strong> 和一些<strong><em>长度相同</em></strong>的单词 **words。**在 <strong>s</strong> 中找出可以恰好串联 <strong>words</strong> 中所有单词的子串的起始位置。</p>
-<p>注意子串要与 <strong>words</strong> 中的单词完全匹配，中间不能有其他字符，但不需要考虑 <strong>words</strong> 中单词串联的顺序。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">  s = &quot;barfoothefoobarman&quot;,</span><br><span class="line">  words = [&quot;foo&quot;,&quot;bar&quot;]</span><br><span class="line">输出: [0,9]</span><br><span class="line">解释: 从索引 0 和 9 开始的子串分别是 &quot;barfoor&quot; 和 &quot;foobar&quot; 。</span><br><span class="line">输出的顺序不重要, [9,0] 也是有效答案。</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">  s = &quot;wordgoodstudentgoodword&quot;,</span><br><span class="line">  words = [&quot;word&quot;,&quot;student&quot;]</span><br><span class="line">输出: []</span><br></pre></td></tr></table></figure>
+        <p>分析以下代码的执行结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">256</span></span><br><span class="line">b = <span class="number">256</span></span><br><span class="line"></span><br><span class="line">c = <span class="number">257</span></span><br><span class="line">d = <span class="number">257</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">	e = <span class="number">256</span></span><br><span class="line">	f = <span class="number">257</span></span><br><span class="line">	g = <span class="number">257</span></span><br><span class="line"></span><br><span class="line">	print(<span class="string">'a is b'</span>, a <span class="keyword">is</span> b)</span><br><span class="line">	print(<span class="string">'c is d'</span>, c <span class="keyword">is</span> d)</span><br><span class="line">	print(<span class="string">'a is e'</span>, a <span class="keyword">is</span> e)</span><br><span class="line">	print(<span class="string">'c is f'</span>, c <span class="keyword">is</span> f)</span><br><span class="line">	print(<span class="string">'f is g'</span>, f <span class="keyword">is</span> g)</span><br><span class="line"></span><br><span class="line">foo()</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="解题思路"><a class="header-anchor" href="#解题思路">¶</a>解题思路</h3>
-<p>首先将<code>words</code>转换成字典<code>word_dict</code>，<code>key</code>为单词，<code>value</code>为单词出现的次数。以<code>words</code>所有单词总长度为窗口，截取字符串<code>s</code>，然后再将子串以单词长度进行分割。如果分割出的子串包含于<code>words</code>中，则<code>word_dict</code>计数相应的减1（计数等于0时，移除该单词），否则进行下一窗口截取。如果最后<code>word_dict</code>为空，则表示找到字符串可以用<code>words</code>所有单词完全匹配。</p>
-<h3 id="code"><a class="header-anchor" href="#code">¶</a>Code</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findSubstring</span><span class="params">(self, s, words)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :type words: List[str]</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        res = []</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> words:</span><br><span class="line">            <span class="keyword">return</span> res</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> s:</span><br><span class="line">            <span class="keyword">return</span> res</span><br><span class="line">        </span><br><span class="line">        word_num = len(words)</span><br><span class="line">        word_len = len(words[<span class="number">0</span>])</span><br><span class="line">        n_word_len = word_len * word_num</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 使用字典记录单词出现的次数 &lt;单词，次数&gt;</span></span><br><span class="line">        word_dict = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line">            <span class="keyword">if</span> word <span class="keyword">in</span> word_dict:</span><br><span class="line">                word_dict[word] += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                word_dict[word] = <span class="number">1</span></span><br><span class="line">                </span><br><span class="line">        d = word_dict.copy()</span><br><span class="line">        p = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> p + n_word_len &lt;= len(s):</span><br><span class="line">            <span class="comment"># 取n_word_len长度子串</span></span><br><span class="line">            sub = s[p:p+n_word_len]</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 每隔word_len进行截取，判断word_dict是否包含该子串</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(word_num):</span><br><span class="line">                item = sub[i*word_len: (i+<span class="number">1</span>)*word_len]</span><br><span class="line">                <span class="keyword">if</span> item <span class="keyword">not</span> <span class="keyword">in</span> d:</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    d[item] -= <span class="number">1</span></span><br><span class="line">                    <span class="keyword">if</span> d[item] == <span class="number">0</span>:</span><br><span class="line">                        <span class="keyword">del</span> d[item]</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 如果word_dict为空，找到子串</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> d:</span><br><span class="line">                res.append(p)</span><br><span class="line">                </span><br><span class="line">            d = word_dict.copy()</span><br><span class="line"> </span><br><span class="line">            p += <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
-<h3 id="问题扩展"><a class="header-anchor" href="#问题扩展">¶</a>问题扩展</h3>
-<p>本题需要匹配的<code>words</code>列表单词长度是<strong>相同</strong>的，如果不相同了？</p>
-<p>比如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">  s = &quot;barrfothefoobarman&quot;,</span><br><span class="line">  words = [&quot;fo&quot;,&quot;barr&quot;]</span><br><span class="line">输出: [0]</span><br><span class="line">解释: 从索引 0 开始的子串为barrfo，可以用words所有单词完全匹配。</span><br></pre></td></tr></table></figure>
-<p>基于以上思路，一种方法是修改子串的校验方法，使用逐字比较。代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findSubstring</span><span class="params">(self, s, words)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :type words: List[str]</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        res = []</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> words:</span><br><span class="line">            <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> s:</span><br><span class="line">            <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line">        n_word_len = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 使用字典记录单词出现的次数 &lt;单词，次数&gt;</span></span><br><span class="line">        word_dict = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line">            n_word_len += len(word)</span><br><span class="line">            <span class="keyword">if</span> word <span class="keyword">in</span> word_dict:</span><br><span class="line">                word_dict[word] += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                word_dict[word] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        p = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> p + n_word_len &lt;= len(s):</span><br><span class="line">            <span class="comment"># 取n_word_len长度子串</span></span><br><span class="line">            sub = s[p:p + n_word_len]</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 逐字比较</span></span><br><span class="line">            <span class="keyword">if</span> self.word_cmp(sub, word_dict):</span><br><span class="line">                res.append(p)</span><br><span class="line"></span><br><span class="line">            p += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">word_cmp</span><span class="params">(self, s, word_dict)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> s <span class="keyword">and</span> <span class="keyword">not</span> word_dict:</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> s <span class="keyword">or</span> <span class="keyword">not</span> word_dict:</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">        d = word_dict.copy()</span><br><span class="line"></span><br><span class="line">        i = <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> i &lt;= len(s):</span><br><span class="line">            sub = s[<span class="number">0</span>:i]</span><br><span class="line">            <span class="keyword">if</span> sub <span class="keyword">not</span> <span class="keyword">in</span> d:</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                d[sub] -= <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> d[sub] == <span class="number">0</span>:</span><br><span class="line">                    <span class="keyword">del</span> d[sub]</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> self.word_cmp(s[i:], d):</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    i += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+<p>保存为<code>test.py</code>并执行<code>python3 test.py</code>，运行结果如下 ：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a is b True</span><br><span class="line">c is d True</span><br><span class="line">a is e True</span><br><span class="line">c is f False</span><br><span class="line">f is g True</span><br></pre></td></tr></table></figure>
+<p>这里先说明下<code>is</code>和<code>==</code>的区别：</p>
+<ul>
+<li><code>is</code>操作符是比较两个实例对象是不是同一个对象，即内存地址是否相同</li>
+<li><code>==</code>操作符是比较两个实例对象内容是不是一样，即内存地址可能不一样</li>
+</ul>
+<p>分析以上结果可知，变量<code>a/b</code>、<code>c/d</code>、<code>a/e</code>、<code>f/g</code>是同一个对象。但<strong>为什么<code>a</code>和<code>e</code>是同一个对象，而<code>c</code>和<code>f</code>不是同一个对象？</strong></p>
+<p>对以上代码，在终端逐行执行，看看结果会是怎么样的。执行过程及结果如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="number">256</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = <span class="number">256</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = <span class="number">257</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d = <span class="number">257</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line"><span class="meta">... </span>    e = <span class="number">256</span></span><br><span class="line"><span class="meta">... </span>    f = <span class="number">257</span></span><br><span class="line"><span class="meta">... </span>    g = <span class="number">257</span></span><br><span class="line"><span class="meta">... </span>    print(<span class="string">'a is b'</span>, a <span class="keyword">is</span> b)</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">'c is d'</span>, c <span class="keyword">is</span> d)</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">'a is e'</span>, a <span class="keyword">is</span> e)</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">'c is f'</span>, c <span class="keyword">is</span> f)</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">'f is g'</span>, f <span class="keyword">is</span> g)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>foo()</span><br><span class="line">a <span class="keyword">is</span> b <span class="keyword">True</span></span><br><span class="line">c <span class="keyword">is</span> d <span class="keyword">False</span></span><br><span class="line">a <span class="keyword">is</span> e <span class="keyword">True</span></span><br><span class="line">c <span class="keyword">is</span> f <span class="keyword">False</span></span><br><span class="line">f <span class="keyword">is</span> g <span class="keyword">True</span></span><br></pre></td></tr></table></figure>
+<p><strong>为啥<code>c</code>和<code>d</code>不是同一个对象了？</strong></p>
+<p>解释以上结果，需要了解<code>Python</code>语言的<strong>小整数与大整数</strong>的处理机制以及<strong>整体解释与逐行解释</strong>的区别。</p>
+<hr>
+<h3 id="小整数与大整数"><a class="header-anchor" href="#小整数与大整数">¶</a>小整数与大整数</h3>
+<p>学过<code>java</code>的都知道，在<code>JDK5</code>中，为<code>Integer</code>的操作引入了一个新的特性，用来节省内存和提高性能。<code>[-128, 127]</code>之间的整形对象在内部实现中通过使用相同的对象引用实现了缓存和重用。为什么对这个区间范围的整数进行缓存？主要是因为这个范围的整数值使用最广泛（<code>JDK6</code>之后可以通过<code>jvm</code>启动参数设置最大值）。</p>
+<p>在<code>Python</code>中，同样采用了类似的整形缓存机制。<code>Python</code>将整数的定义细分为小整数和大整数，前者整数值范围为<code>[-5, 257)</code>，其余整数为后者。</p>
+<h5 id="1-小整数对象缓存池"><a class="header-anchor" href="#1-小整数对象缓存池">¶</a>1. 小整数对象缓存池</h5>
+<p><code>Python</code>将小整数缓存到一个特定的<code>small_ints</code>链表中，该链表会存在于<code>Python</code>解释器的整个生命周期，当需要使用小整数时，就去该链表中获取。简单来说，<strong>小整数对象会在Python全局解析器范围内被重复引用，且永远不会被GC回收</strong>。</p>
+<h5 id="2-通用整数对象缓存池"><a class="header-anchor" href="#2-通用整数对象缓存池">¶</a>2. 通用整数对象缓存池</h5>
+<p><code>Python</code>运行环境会为大整数对象分配一定的缓存内存空间，该内存空间会被大整数对象轮流使用，直到占满为止，再继续则开辟一块新的内存空间。通过分析<code>Python</code>源码可知，通用整数对象缓存池的结构体定义如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> _<span class="title">intblock</span> &#123;</span>  </span><br><span class="line">    <span class="class"><span class="keyword">struct</span> _<span class="title">intblock</span> *<span class="title">next</span>;</span>  </span><br><span class="line">    PyIntObject objects[N_INTOBJECTS];  </span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">intblock</span> <span class="title">PyIntBlock</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> PyIntBlock *block_list = <span class="literal">NULL</span>;  </span><br><span class="line"><span class="keyword">static</span> PyIntObject *free_list = <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
+<p><code>PyIntBlock</code>结构体定义了一个<code>PyIntObject</code>数组和指向下一个<code>PyIntBlock</code>结构的指针<code>*next</code>。每个block大约可以存放82个<code>PyIntObject</code>。<code>block_list</code>用于维护分配给<code>PyIntObject</code>所有的内存空间，<code>free_list</code>则用于维护<code>PyIntObject</code>可用的剩余内存空间。</p>
+<ul>
+<li>
+<p>当<code>free_list</code>为<code>NULL</code>时，<code>Python</code>会重新<code>malloc</code>一个新的block出来。</p>
+</li>
+<li>
+<p>当一个大整数对象的引用计数为0需要被回收时，其占用的内存空间并不会被回收，而是放到<code>free_list</code>数组中，供新创建的整数对象使用，从而减少内存创建、释放带来的开销。</p>
+</li>
+</ul>
+<p>综上所述，可以解释变量<code>a/b</code>、<code>c/d</code>、<code>a/e</code>、<code>f/g</code>为什么是同一个对象。但是还不足以解释<code>c/f</code>以及在终端执行时<code>c/d</code>的结果。这就需要了解<strong>Python的解析模式</strong>——整体解释和逐行解释。</p>
+<h3 id="整体解释与逐行解释"><a class="header-anchor" href="#整体解释与逐行解释">¶</a>整体解释与逐行解释</h3>
+<p><strong>整体解释</strong>指的通过应用程序的方式来运行Python代码，而<strong>逐行解释</strong>是在交互式解释器中执行Python代码。在Python中，解析器的<strong>编译单元是一个函数</strong>（Python顶层代码也被当作一个函数来进行编译）。每个函数单独编译后会得到一个<code>PyFunctionObject</code>对象，该对象包含了字节码、常量池等信息。</p>
+<p>每个<code>PyFunctionObject</code>都拥有一个独立的常量池，如果在同一个<code>PyFunctionObject</code>里创建了值相同的常量，那么这些常量只会在常量池里出现一份。</p>
+<p>由此可知，问题中总共包含两个<code>PyFunctionObject</code>对象——由顶层函数和<code>foo</code>函数编译。顶层变量<code>c/d</code>和位于<code>foo</code>函数中的<code>f/g</code>分别位于两个不同的<code>PyFunctionObject</code>对象中，虽然值相同，但是内存地址不同。这就解释了<code>c/f</code>的运行结果。那为什么<code>a/e</code>两个变量是相同的对象了，那是因为小整数是全局解释器缓存的！</p>
+<p>那么就剩一个问题了，为什么在交互式命令行终端<code>c/d</code>不是同一个对象了？</p>
+<p>那是因为在交互式中，每输入一行语句就会立即执行，即<strong>编译单元是一行语句</strong>，每执行一行语句就会得到一个<code>PyFunctionObject</code>对象。注意，这里所说的“一行”是指的一次完整性输入。</p>
+<p>综上所述，可以得到以下结论：</p>
+<ul>
+<li>整体解释是以函数为编译单元的，而交互式终端是以一行语句输入为编译单元，每个编译单元具有独立的常量池</li>
+<li>小整数范围为<code>[-5, 257)</code>，缓存在全局解释器中，而大整数缓存在编译单元中</li>
+</ul>
+<p>###问题扩展</p>
+<p>修改<code>foo</code>函数如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">256</span></span><br><span class="line">b = <span class="number">256</span></span><br><span class="line"></span><br><span class="line">c = <span class="number">257</span></span><br><span class="line">d = <span class="number">257</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">(h=<span class="number">256</span>, i=<span class="number">257</span>)</span>:</span></span><br><span class="line">	e = <span class="number">256</span></span><br><span class="line">	f = <span class="number">257</span></span><br><span class="line">	g = <span class="number">257</span></span><br><span class="line">    </span><br><span class="line">	print(<span class="string">'a is h'</span>, a <span class="keyword">is</span> h)  <span class="comment"># ?</span></span><br><span class="line">	print(<span class="string">'c is i'</span>, c <span class="keyword">is</span> i)  <span class="comment"># ?</span></span><br><span class="line">	print(<span class="string">'f is i'</span>, f <span class="keyword">is</span> i)  <span class="comment"># ?</span></span><br><span class="line"></span><br><span class="line">foo()</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a <span class="keyword">is</span> h <span class="keyword">True</span></span><br><span class="line">c <span class="keyword">is</span> i <span class="keyword">True</span></span><br><span class="line">f <span class="keyword">is</span> i <span class="keyword">False</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -490,9 +521,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hash/" rel="tag"># Hash</a>
+            <a href="/tags/小整数/" rel="tag"># 小整数</a>
           
-            <a href="/tags/字符串/" rel="tag"># 字符串</a>
+            <a href="/tags/大整数/" rel="tag"># 大整数</a>
+          
+            <a href="/tags/整数缓存/" rel="tag"># 整数缓存</a>
           
         </div>
       
@@ -505,8 +538,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/01/n29-divide-two-integers/" rel="next" title="LeetCode29 两数相除">
-                <i class="fa fa-chevron-left"></i> LeetCode29 两数相除
+              <a href="/2018/05/04/n31-next-permutation/" rel="next" title="LeetCode31 下一个排列">
+                <i class="fa fa-chevron-left"></i> LeetCode31 下一个排列
               </a>
             
           </div>
@@ -514,10 +547,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/04/n31-next-permutation/" rel="prev" title="LeetCode31 下一个排列">
-                LeetCode31 下一个排列 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -704,7 +733,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">¶问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题思路"><span class="nav-number">2.</span> <span class="nav-text">¶解题思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code"><span class="nav-number">3.</span> <span class="nav-text">¶Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题扩展"><span class="nav-number">4.</span> <span class="nav-text">¶问题扩展</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#小整数与大整数"><span class="nav-number">1.</span> <span class="nav-text">¶小整数与大整数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-小整数对象缓存池"><span class="nav-number">1.0.1.</span> <span class="nav-text">¶1. 小整数对象缓存池</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-通用整数对象缓存池"><span class="nav-number">1.0.2.</span> <span class="nav-text">¶2. 通用整数对象缓存池</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整体解释与逐行解释"><span class="nav-number">2.</span> <span class="nav-text">¶整体解释与逐行解释</span></a></li></ol></div>
             
 
           </div>
