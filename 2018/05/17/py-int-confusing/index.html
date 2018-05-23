@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Moz的博客">
 <meta property="og:description" content="分析以下代码的执行结果 123456789101112131415161718192021#!/usr/bin/env python3# coding: utf-8a = 256b = 256c = 257d = 257def foo():	e = 256	f = 257	g = 257	print(&apos;a is b&apos;, a is b)	print(&apos;c is d&apos;, c is d)	print(&apos;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-23T04:54:26.756Z">
+<meta property="og:updated_time" content="2018-05-23T05:00:24.478Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 小整数与大整数的处理机制以及整体解释与逐行解释的区别">
 <meta name="twitter:description" content="分析以下代码的执行结果 123456789101112131415161718192021#!/usr/bin/env python3# coding: utf-8a = 256b = 256c = 257d = 257def foo():	e = 256	f = 257	g = 257	print(&apos;a is b&apos;, a is b)	print(&apos;c is d&apos;, c is d)	print(&apos;">
@@ -381,7 +381,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-05-23 12:54:26" itemprop="dateModified" datetime="2018-05-23T12:54:26+08:00">2018-05-23</time>
+                <time title="Modified: 2018-05-23 13:00:24" itemprop="dateModified" datetime="2018-05-23T13:00:24+08:00">2018-05-23</time>
               
             
           </span>
@@ -472,7 +472,6 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="number">256</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = <span class="number">256</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = <span class="number">257</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d = <span class="number">257</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line"><span class="meta">... </span>    e = <span class="number">256</span></span><br><span class="line"><span class="meta">... </span>    f = <span class="number">257</span></span><br><span class="line"><span class="meta">... </span>    g = <span class="number">257</span></span><br><span class="line"><span class="meta">... </span>    print(<span class="string">'a is b'</span>, a <span class="keyword">is</span> b)</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">'c is d'</span>, c <span class="keyword">is</span> d)</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">'a is e'</span>, a <span class="keyword">is</span> e)</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">'c is f'</span>, c <span class="keyword">is</span> f)</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">'f is g'</span>, f <span class="keyword">is</span> g)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>foo()</span><br><span class="line">a <span class="keyword">is</span> b <span class="keyword">True</span></span><br><span class="line">c <span class="keyword">is</span> d <span class="keyword">False</span></span><br><span class="line">a <span class="keyword">is</span> e <span class="keyword">True</span></span><br><span class="line">c <span class="keyword">is</span> f <span class="keyword">False</span></span><br><span class="line">f <span class="keyword">is</span> g <span class="keyword">True</span></span><br></pre></td></tr></table></figure>
 <p><strong>为啥<code>c</code>和<code>d</code>不是同一个对象了？</strong></p>
 <p>解释以上结果，需要了解<code>Python</code>语言的<strong>小整数与大整数</strong>的处理机制以及<strong>整体解释与逐行解释</strong>的区别。</p>
-<hr>
 <h3 id="小整数与大整数"><a class="header-anchor" href="#小整数与大整数">null</a>小整数与大整数</h3>
 <p>学过<code>java</code>的都知道，在<code>JDK5</code>中，为<code>Integer</code>的操作引入了一个新的特性，用来节省内存和提高性能。<code>[-128, 127]</code>之间的整形对象在内部实现中通过使用相同的对象引用实现了缓存和重用。为什么对这个区间范围的整数进行缓存？主要是因为这个范围的整数值使用最广泛（<code>JDK6</code>之后可以通过<code>jvm</code>启动参数设置最大值）。</p>
 <p>在<code>Python</code>中，同样采用了类似的整形缓存机制。<code>Python</code>将整数的定义细分为小整数和大整数，前者整数值范围为<code>[-5, 257)</code>，其余整数为后者。</p>
