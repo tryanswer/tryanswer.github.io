@@ -3,11 +3,25 @@
   
     
     <entry>
-      <title>scala_implicit</title>
+      <title>Scala 隐式转换implicit</title>
       <link href="/2018/05/24/scala-implicit/"/>
       <url>/2018/05/24/scala-implicit/</url>
       <content type="html"><![CDATA[]]></content>
       
+      <categories>
+          
+          <category> Scala </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> implicit </tag>
+            
+            <tag> 隐式转换 </tag>
+            
+        </tags>
       
     </entry>
     
