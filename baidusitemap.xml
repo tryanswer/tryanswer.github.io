@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>https://tryanswer.github.io/2018/05/25/n32-longest-valid-parentheses/</loc>
+    <lastmod>2018-05-25T15:06:18.210Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode32 最长有效括号</title>
+        <pubTime>2018-05-25T14:26:11.000Z</pubTime>
+        
+        <tag>栈</tag>
+         
+        <tag>动态规划</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="https://tryanswer.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="https://tryanswer.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tryanswer.github.io/2018/05/25/graph-analysis/</loc>
     <lastmod>2018-05-25T08:40:17.882Z</lastmod>
     <data>
@@ -170,11 +195,11 @@
         <title>LeetCode29 两数相除</title>
         <pubTime>2018-05-01T11:33:50.000Z</pubTime>
         
+        <tag>递归</tag>
+         
         <tag>数学</tag>
          
         <tag>除法</tag>
-         
-        <tag>递归</tag>
          
          
            
