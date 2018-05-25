@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Moz的博客">
 <meta property="og:description" content="最近在使用Spark-GraphX做图相关的算法分析，想着深入看看源码的实现。由于对Scala不熟悉，只能边看源码边去了解Scala的特性。在分析过程中，发现很多地方使用implicit关键词，就想深入了解下implicit。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-25T03:06:43.424Z">
+<meta property="og:updated_time" content="2018-05-25T03:08:04.058Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Scala 隐式转换implicit详解">
 <meta name="twitter:description" content="最近在使用Spark-GraphX做图相关的算法分析，想着深入看看源码的实现。由于对Scala不熟悉，只能边看源码边去了解Scala的特性。在分析过程中，发现很多地方使用implicit关键词，就想深入了解下implicit。">
@@ -412,7 +412,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-05-25 11:06:43" itemprop="dateModified" datetime="2018-05-25T11:06:43+08:00">2018-05-25</time>
+                <time title="修改时间：2018-05-25 11:08:04" itemprop="dateModified" datetime="2018-05-25T11:08:04+08:00">2018-05-25</time>
               
             
           </span>
@@ -508,8 +508,7 @@
 <p>当然，万事都是一把双刃剑，<code>implicit</code>使得Scala变的非常灵活，但增加了开发者阅读代码的难度，因为你不知道作者在哪些地方实现了<code>implicit</code>。</p>
 <p>下面，就让我们来详细看看Scala里支持哪些<code>implicit</code>类型，以及应用隐式转换规则的限定条件。</p>
 <h3 id="隐式转换类型"><a href="#隐式转换类型" class="headerlink" title="隐式转换类型"></a>隐式转换类型</h3><p>Scala隐式转换类型主要包括以下几种类型：隐式参数、隐式试图、隐式类。</p>
-<p>####隐式参数</p>
-<blockquote>
+<h4 id="隐式参数"><a href="#隐式参数" class="headerlink" title="隐式参数"></a>隐式参数</h4><blockquote>
 <p>隐式参数是在编译器找不到函数需要某种类型的参数时的一种修复机制。</p>
 </blockquote>
 <p>举个例子：</p>
@@ -908,7 +907,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Implicit简介"><span class="nav-number">1.</span> <span class="nav-text">Implicit简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐式转换类型"><span class="nav-number">2.</span> <span class="nav-text">隐式转换类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#隐式视图"><span class="nav-number">2.1.</span> <span class="nav-text">隐式视图</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#隐式类型转换"><span class="nav-number">2.1.1.</span> <span class="nav-text">隐式类型转换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#隐式方法调用"><span class="nav-number">2.1.2.</span> <span class="nav-text">隐式方法调用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#隐式类"><span class="nav-number">2.2.</span> <span class="nav-text">隐式类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐式解析机制"><span class="nav-number">3.</span> <span class="nav-text">隐式解析机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文献"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Implicit简介"><span class="nav-number">1.</span> <span class="nav-text">Implicit简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐式转换类型"><span class="nav-number">2.</span> <span class="nav-text">隐式转换类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#隐式参数"><span class="nav-number">2.1.</span> <span class="nav-text">隐式参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#隐式视图"><span class="nav-number">2.2.</span> <span class="nav-text">隐式视图</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#隐式类型转换"><span class="nav-number">2.2.1.</span> <span class="nav-text">隐式类型转换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#隐式方法调用"><span class="nav-number">2.2.2.</span> <span class="nav-text">隐式方法调用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#隐式类"><span class="nav-number">2.3.</span> <span class="nav-text">隐式类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐式解析机制"><span class="nav-number">3.</span> <span class="nav-text">隐式解析机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文献"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>
