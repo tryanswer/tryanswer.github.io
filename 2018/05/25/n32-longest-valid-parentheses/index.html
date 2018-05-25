@@ -127,18 +127,18 @@
 
 
 
-  <meta name="description" content="LeetCode第32题 null问题描述 给定一个只包含 &apos;(&apos; 和 &apos;)&apos; 的字符串，找出最长的包含有效括号的子串的长度。 示例 1: 123输入: &amp;quot;(()&amp;quot;输出: 2解释: 最长有效括号子串为 &amp;quot;()&amp;quot; 示例 2: 123输入: &amp;quot;)()())&amp;quot;输出: 4解释: 最长有效括号子串为 &amp;quot;()()&amp;quot;">
+  <meta name="description" content="LeetCode第32题 问题描述给定一个只包含 &amp;#39;(&amp;#39; 和 &amp;#39;)&amp;#39; 的字符串，找出最长的包含有效括号的子串的长度。 示例 1: 123输入: &amp;quot;(()&amp;quot;输出: 2解释: 最长有效括号子串为 &amp;quot;()&amp;quot; 示例 2: 123输入: &amp;quot;)()())&amp;quot;输出: 4解释: 最长有效括号子串为 &amp;quot;()()&amp;qu">
 <meta name="keywords" content="栈,动态规划">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode32 最长有效括号">
 <meta property="og:url" content="https://tryanswer.github.io/2018/05/25/n32-longest-valid-parentheses/index.html">
 <meta property="og:site_name" content="Moz的博客">
-<meta property="og:description" content="LeetCode第32题 null问题描述 给定一个只包含 &apos;(&apos; 和 &apos;)&apos; 的字符串，找出最长的包含有效括号的子串的长度。 示例 1: 123输入: &amp;quot;(()&amp;quot;输出: 2解释: 最长有效括号子串为 &amp;quot;()&amp;quot; 示例 2: 123输入: &amp;quot;)()())&amp;quot;输出: 4解释: 最长有效括号子串为 &amp;quot;()()&amp;quot;">
+<meta property="og:description" content="LeetCode第32题 问题描述给定一个只包含 &amp;#39;(&amp;#39; 和 &amp;#39;)&amp;#39; 的字符串，找出最长的包含有效括号的子串的长度。 示例 1: 123输入: &amp;quot;(()&amp;quot;输出: 2解释: 最长有效括号子串为 &amp;quot;()&amp;quot; 示例 2: 123输入: &amp;quot;)()())&amp;quot;输出: 4解释: 最长有效括号子串为 &amp;quot;()()&amp;qu">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-05-25T15:06:18.210Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode32 最长有效括号">
-<meta name="twitter:description" content="LeetCode第32题 null问题描述 给定一个只包含 &apos;(&apos; 和 &apos;)&apos; 的字符串，找出最长的包含有效括号的子串的长度。 示例 1: 123输入: &amp;quot;(()&amp;quot;输出: 2解释: 最长有效括号子串为 &amp;quot;()&amp;quot; 示例 2: 123输入: &amp;quot;)()())&amp;quot;输出: 4解释: 最长有效括号子串为 &amp;quot;()()&amp;quot;">
+<meta name="twitter:description" content="LeetCode第32题 问题描述给定一个只包含 &amp;#39;(&amp;#39; 和 &amp;#39;)&amp;#39; 的字符串，找出最长的包含有效括号的子串的长度。 示例 1: 123输入: &amp;quot;(()&amp;quot;输出: 2解释: 最长有效括号子串为 &amp;quot;()&amp;quot; 示例 2: 123输入: &amp;quot;)()())&amp;quot;输出: 4解释: 最长有效括号子串为 &amp;quot;()()&amp;qu">
 
 
 
@@ -481,58 +481,42 @@
 
       
         <p><a href="https://leetcode-cn.com/problems/longest-valid-parentheses/description/" target="_blank" rel="noopener">LeetCode第32题</a></p>
-<h3 id="问题描述"><a class="header-anchor" href="#问题描述">null</a>问题描述</h3>
-<p>给定一个只包含 <code>'('</code> 和 <code>')'</code> 的字符串，找出最长的包含有效括号的子串的长度。</p>
+<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定一个只包含 <code>&#39;(&#39;</code> 和 <code>&#39;)&#39;</code> 的字符串，找出最长的包含有效括号的子串的长度。</p>
 <p><strong>示例 1:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;(()&quot;</span><br><span class="line">输出: 2</span><br><span class="line">解释: 最长有效括号子串为 &quot;()&quot;</span><br></pre></td></tr></table></figure>
 <p><strong>示例 2:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;)()())&quot;</span><br><span class="line">输出: 4</span><br><span class="line">解释: 最长有效括号子串为 &quot;()()&quot;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="解题思路"><a class="header-anchor" href="#解题思路">null</a>解题思路</h3>
-<p>本题的一种思路是使用栈，栈中元素保存<code>[字符，最大长度]</code></p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>本题的一种思路是使用栈，栈中元素保存<code>[字符，最大长度]</code></p>
 <ol>
-<li>
-<p>初始化栈<code>stack</code>和最大长度<code>max_len</code></p>
+<li><p>初始化栈<code>stack</code>和最大长度<code>max_len</code></p>
 </li>
-<li>
-<p>遍历字符串</p>
+<li><p>遍历字符串</p>
 </li>
-<li>
-<p>如果当前字符是<code>)</code>，且栈顶元素<code>stack[-1] = ['(', length]</code>，那么：</p>
+<li><p>如果当前字符是<code>)</code>，且栈顶元素<code>stack[-1] = [&#39;(&#39;, length]</code>，那么：</p>
 <ul>
-<li>
-<p>当前匹配长度 = <code>length + 2</code></p>
+<li><p>当前匹配长度 = <code>length + 2</code></p>
 </li>
-<li>
-<p>弹出栈顶元素</p>
+<li><p>弹出栈顶元素</p>
 </li>
-<li>
-<p><code>stack[-1][1] += 当前匹配长度</code></p>
-</li>
-<li>
-<p><code>max_len = max(stack[-1][1], max_len)</code></p>
-</li>
+<li><code>stack[-1][1] += 当前匹配长度</code></li>
+<li><code>max_len = max(stack[-1][1], max_len)</code></li>
 </ul>
 </li>
-<li>
-<p>否则，将<code>['x', 0]</code>压栈</p>
+<li><p>否则，将<code>[&#39;x&#39;, 0]</code>压栈</p>
 </li>
-<li>
-<p>返回<code>max_len</code>即为最长有效括号</p>
+<li><p>返回<code>max_len</code>即为最长有效括号</p>
 </li>
 </ol>
-<h3 id="代码"><a class="header-anchor" href="#代码">null</a>代码</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestValidParentheses</span><span class="params">(self, s)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        </span><br><span class="line">        stack, max_len = [[<span class="string">''</span>, <span class="number">0</span>]], <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">if</span> ord(c) == ord(stack[<span class="number">-1</span>][<span class="number">0</span>]) + <span class="number">1</span>:</span><br><span class="line">                count = stack[<span class="number">-1</span>][<span class="number">1</span>] + <span class="number">2</span></span><br><span class="line">                stack.pop()</span><br><span class="line">                stack[<span class="number">-1</span>][<span class="number">1</span>] += count</span><br><span class="line">                max_len = max(stack[<span class="number">-1</span>][<span class="number">1</span>], max_len)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append([c, <span class="number">0</span>])</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> max_len</span><br></pre></td></tr></table></figure>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestValidParentheses</span><span class="params">(self, s)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        </span><br><span class="line">        stack, max_len = [[<span class="string">''</span>, <span class="number">0</span>]], <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">if</span> ord(c) == ord(stack[<span class="number">-1</span>][<span class="number">0</span>]) + <span class="number">1</span>:</span><br><span class="line">                count = stack[<span class="number">-1</span>][<span class="number">1</span>] + <span class="number">2</span></span><br><span class="line">                stack.pop()</span><br><span class="line">                stack[<span class="number">-1</span>][<span class="number">1</span>] += count</span><br><span class="line">                max_len = max(stack[<span class="number">-1</span>][<span class="number">1</span>], max_len)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append([c, <span class="number">0</span>])</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> max_len</span><br></pre></td></tr></table></figure>
 <p>另外一种解题思路是采用栈和动态规划：</p>
 <ol>
 <li>定义<code>start</code>变量记录合法括号串的起始位置</li>
 <li>遍历字符串</li>
 <li>如果遇到<code>(</code>，则将当前下标压入栈</li>
-<li>如果遇到<code>)</code>，则有两种情况：
-<ul>
+<li>如果遇到<code>)</code>，则有两种情况：<ul>
 <li>如果当前栈为空，则将下一个坐标位置记录到<code>start</code></li>
-<li>如果当前栈不为空，则将栈顶元素取出
-<ul>
+<li>如果当前栈不为空，则将栈顶元素取出<ul>
 <li>若此时栈为空，最长值=<code>max(最长值, 当前下标 - start + 1)</code></li>
 <li>否则最长值=<code>max(最长值, 当前下标 - 栈顶元素值)</code></li>
 </ul>
@@ -918,7 +902,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">null问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题思路"><span class="nav-number">2.</span> <span class="nav-text">null解题思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">null代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题思路"><span class="nav-number">2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
