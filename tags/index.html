@@ -23,6 +23,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -448,10 +452,22 @@
                     
                   
                 
-                目前共计 15 个标签
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                目前共计 18 个标签
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/Hash/" style="font-size: 12px; color: #ccc">Hash</a> <a href="/tags/implicit/" style="font-size: 12px; color: #ccc">implicit</a> <a href="/tags/堆/" style="font-size: 12px; color: #ccc">堆</a> <a href="/tags/大整数/" style="font-size: 12px; color: #ccc">大整数</a> <a href="/tags/字符串/" style="font-size: 12px; color: #ccc">字符串</a> <a href="/tags/小整数/" style="font-size: 12px; color: #ccc">小整数</a> <a href="/tags/排序/" style="font-size: 12px; color: #ccc">排序</a> <a href="/tags/数学/" style="font-size: 12px; color: #ccc">数学</a> <a href="/tags/数组/" style="font-size: 12px; color: #ccc">数组</a> <a href="/tags/整数缓存/" style="font-size: 12px; color: #ccc">整数缓存</a> <a href="/tags/程序员密码/" style="font-size: 12px; color: #ccc">程序员密码</a> <a href="/tags/递归/" style="font-size: 21px; color: #6f6f6f">递归</a> <a href="/tags/链表/" style="font-size: 30px; color: #111">链表</a> <a href="/tags/除法/" style="font-size: 12px; color: #ccc">除法</a> <a href="/tags/隐式转换/" style="font-size: 12px; color: #ccc">隐式转换</a>
+              <a href="/tags/Hash/" style="font-size: 12px; color: #ccc">Hash</a> <a href="/tags/Spark-GraphX/" style="font-size: 12px; color: #ccc">Spark GraphX</a> <a href="/tags/implicit/" style="font-size: 12px; color: #ccc">implicit</a> <a href="/tags/图挖掘/" style="font-size: 12px; color: #ccc">图挖掘</a> <a href="/tags/图计算/" style="font-size: 12px; color: #ccc">图计算</a> <a href="/tags/堆/" style="font-size: 12px; color: #ccc">堆</a> <a href="/tags/大整数/" style="font-size: 12px; color: #ccc">大整数</a> <a href="/tags/字符串/" style="font-size: 12px; color: #ccc">字符串</a> <a href="/tags/小整数/" style="font-size: 12px; color: #ccc">小整数</a> <a href="/tags/排序/" style="font-size: 12px; color: #ccc">排序</a> <a href="/tags/数学/" style="font-size: 12px; color: #ccc">数学</a> <a href="/tags/数组/" style="font-size: 12px; color: #ccc">数组</a> <a href="/tags/整数缓存/" style="font-size: 12px; color: #ccc">整数缓存</a> <a href="/tags/程序员密码/" style="font-size: 12px; color: #ccc">程序员密码</a> <a href="/tags/递归/" style="font-size: 21px; color: #6f6f6f">递归</a> <a href="/tags/链表/" style="font-size: 30px; color: #111">链表</a> <a href="/tags/除法/" style="font-size: 12px; color: #ccc">除法</a> <a href="/tags/隐式转换/" style="font-size: 12px; color: #ccc">隐式转换</a>
             </div>
           </div>
         
@@ -512,7 +528,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -541,7 +557,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -590,7 +610,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">15</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -706,6 +732,12 @@
       </div>
     
 
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
     
 
   </div>
@@ -1195,6 +1227,39 @@
 
 
   
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
   
 
   
