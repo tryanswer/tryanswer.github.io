@@ -127,25 +127,25 @@
 
 
 
-  <meta name="description" content="最近在使用Spark-GraphX做图相关的算法分析，想着深入看看源码的实现。由于对Scala不熟悉，只能边看源码边去了解Scala的特性。在分析过程中，发现很多地方使用implicit关键词，就想深入了解下implicit。">
-<meta name="keywords" content="implicit,隐式转换">
+  <meta name="description" content="转载自 Scala基础 - 下划线使用指南 @joymufeng  用户替换Java的等价语法导入通配符12345// Javaimport java.util.*;// Scalaimport java.util._ *在Scala中是合法的方法名，所以导入包时要使用_代替。 类成员默认值1234class Foo&amp;#123;	// String类型的默认值为null    var s: St">
+<meta name="keywords" content="underscore">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Scala 隐式转换implicit详解">
-<meta property="og:url" content="https://tryanswer.github.io/2018/05/24/scala-implicit/index.html">
+<meta property="og:title" content="Scala 下划线的用途">
+<meta property="og:url" content="https://tryanswer.github.io/2018/05/30/scala-underscore/index.html">
 <meta property="og:site_name" content="Moz的博客">
-<meta property="og:description" content="最近在使用Spark-GraphX做图相关的算法分析，想着深入看看源码的实现。由于对Scala不熟悉，只能边看源码边去了解Scala的特性。在分析过程中，发现很多地方使用implicit关键词，就想深入了解下implicit。">
+<meta property="og:description" content="转载自 Scala基础 - 下划线使用指南 @joymufeng  用户替换Java的等价语法导入通配符12345// Javaimport java.util.*;// Scalaimport java.util._ *在Scala中是合法的方法名，所以导入包时要使用_代替。 类成员默认值1234class Foo&amp;#123;	// String类型的默认值为null    var s: St">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-25T03:08:04.058Z">
+<meta property="og:updated_time" content="2018-05-30T10:53:36.208Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Scala 隐式转换implicit详解">
-<meta name="twitter:description" content="最近在使用Spark-GraphX做图相关的算法分析，想着深入看看源码的实现。由于对Scala不熟悉，只能边看源码边去了解Scala的特性。在分析过程中，发现很多地方使用implicit关键词，就想深入了解下implicit。">
+<meta name="twitter:title" content="Scala 下划线的用途">
+<meta name="twitter:description" content="转载自 Scala基础 - 下划线使用指南 @joymufeng  用户替换Java的等价语法导入通配符12345// Javaimport java.util.*;// Scalaimport java.util._ *在Scala中是合法的方法名，所以导入包时要使用_代替。 类成员默认值1234class Foo&amp;#123;	// String类型的默认值为null    var s: St">
 
 
 
 
 
 
-  <link rel="canonical" href="https://tryanswer.github.io/2018/05/24/scala-implicit/"/>
+  <link rel="canonical" href="https://tryanswer.github.io/2018/05/30/scala-underscore/"/>
 
 
 
@@ -155,7 +155,7 @@
   };
 </script>
 
-  <title>Scala 隐式转换implicit详解 | Moz的博客</title>
+  <title>Scala 下划线的用途 | Moz的博客</title>
   
 
 
@@ -357,7 +357,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tryanswer.github.io/2018/05/24/scala-implicit/">
+    <link itemprop="mainEntityOfPage" href="https://tryanswer.github.io/2018/05/30/scala-underscore/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Moz">
@@ -374,7 +374,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Scala 隐式转换implicit详解
+          <h2 class="post-title" itemprop="name headline">Scala 下划线的用途
               
             
           </h2>
@@ -399,24 +399,12 @@
                 
               
 
-              <time title="创建时间：2018-05-24 15:18:35" itemprop="dateCreated datePublished" datetime="2018-05-24T15:18:35+08:00">2018-05-24</time>
+              <time title="创建时间：2018-05-30 17:21:38 / 修改时间：18:53:36" itemprop="dateCreated datePublished" datetime="2018-05-30T17:21:38+08:00">2018-05-30</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-05-25 11:08:04" itemprop="dateModified" datetime="2018-05-25T11:08:04+08:00">2018-05-25</time>
               
             
           </span>
@@ -448,8 +436,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/24/scala-implicit/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2018/05/24/scala-implicit/" itemprop="commentsCount"></span>
+                <a href="/2018/05/30/scala-underscore/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2018/05/30/scala-underscore/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -485,96 +473,45 @@
       
 
       
-        <p>最近在使用<code>Spark-GraphX</code>做图相关的算法分析，想着深入看看源码的实现。由于对<code>Scala</code>不熟悉，只能边看源码边去了解<code>Scala</code>的特性。在分析过程中，发现很多地方使用<code>implicit</code>关键词，就想深入了解下<code>implicit</code>。</p>
-<a id="more"></a>
-<h3 id="Implicit简介"><a href="#Implicit简介" class="headerlink" title="Implicit简介"></a>Implicit简介</h3><p><strong>implicit</strong>，即隐式转换，是支撑<code>Scala</code>易用、容错以及灵活语法的基础。</p>
-<blockquote>
-<p>Scala的隐式转换系统定义了一套良好的查找机制，当代码出现类型编译错误时，编译器试图去寻找一个隐式<code>implicit</code>的转换方法，转换出正确的类型，从而使得编译器能够自我修复，完成编译。</p>
+        <blockquote>
+<p>转载自 <a href="https://my.oschina.net/joymufeng/blog/863823" target="_blank" rel="noopener">Scala基础 - 下划线使用指南</a> <a href="https://my.oschina.net/joymufeng/home" target="_blank" rel="noopener">@joymufeng</a></p>
 </blockquote>
-<p>比如，在<code>Spark</code>源码中，经常会发现<code>RDD</code>这个类没有<code>reduceByKey</code>、<code>groupByKey</code>等方法定义，但是却可以在<code>RDD</code>上调用这些方法。这就是<code>Scala</code>隐式转换导致的。</p>
-<p>参考<code>Spark</code>源码<code>core/src/main/scala/org/apache/spark/rdd/RDD.scala</code>文件，在<code>RDD</code>这个对象上定义了一个<code>rddToPairRDDFunctions</code>隐式转换（在1.3版本之前，该隐式转换定义在SparkContext对象中）。</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Defines implicit functions that provide extra functionalities on RDDs of specific types.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * For example, [[RDD.rddToPairRDDFunctions]] converts an RDD into a [[PairRDDFunctions]] for</span></span><br><span class="line"><span class="comment"> * key-value-pair RDDs, and enabling extra functionalities such as `PairRDDFunctions.reduceByKey`.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">RDD</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span>[spark] <span class="keyword">val</span> <span class="type">CHECKPOINT_ALL_MARKED_ANCESTORS</span> =</span><br><span class="line">    <span class="string">"spark.checkpoint.checkpointAllMarkedAncestors"</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// The following implicit functions were in SparkContext before 1.3 and users had to</span></span><br><span class="line">  <span class="comment">// `import SparkContext._` to enable them. Now we move them here to make the compiler find</span></span><br><span class="line">  <span class="comment">// them automatically. However, we still keep the old functions in SparkContext for backward</span></span><br><span class="line">  <span class="comment">// compatibility and forward to the following functions directly.</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">implicit</span> <span class="function"><span class="keyword">def</span> <span class="title">rddToPairRDDFunctions</span></span>[<span class="type">K</span>, <span class="type">V</span>](rdd: <span class="type">RDD</span>[(<span class="type">K</span>, <span class="type">V</span>)])</span><br><span class="line">    (<span class="keyword">implicit</span> kt: <span class="type">ClassTag</span>[<span class="type">K</span>], vt: <span class="type">ClassTag</span>[<span class="type">V</span>], ord: <span class="type">Ordering</span>[<span class="type">K</span>] = <span class="literal">null</span>): <span class="type">PairRDDFunctions</span>[<span class="type">K</span>, <span class="type">V</span>] = &#123;</span><br><span class="line">    <span class="keyword">new</span> <span class="type">PairRDDFunctions</span>(rdd)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p><code>rddToPairRDDFunctions</code>隐式转换，即将<code>RDD[(K, V)]</code>类型的rdd转换为<code>PairRDDFunctions</code>对象，从而可以在原始的rdd对象上调用<code>reduceByKey</code>之类的方法。</p>
-<p>那为什么执行完<code>reductByKey</code>方法后，返回的还是原始的<code>rdd</code>对象了？那是因为每次执行完<code>PairRDDFunctions</code>对象方法后，会返回<code>rdd</code>对象。</p>
-<p>类型隐式转换是在需要的时候才会触发，如果调用需要进行隐式转换的方法，隐式转换才会进行，否则还是传统的RDD类型的对象。</p>
-<p>隐式转换对于代码重构提供了一种新的思路，比如公司有一个历时悠久的用户认证系统，各大业务系统一般会引入以下认证服务接口进行认证授权：</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HttpAuthParam</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">trait</span> <span class="title">IAuthService</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">auth</span></span>(p: <span class="type">HttpAuthParam</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>但是随着业务的发展，有些需要支持<code>TCP</code>协议的授权认证。一种方法是在<code>IAuthService</code>接口对<code>auth</code>方法进行重载，以满足<code>TCP</code>参数形式，那么就有：</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">trait</span> <span class="title">IAuthService</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">auth</span></span>(p: <span class="type">HttpAuthParam</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 新版中支持对tcp消息鉴权的业务方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">auth</span></span>(p: <span class="type">TcpAuthMsg</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这种做法的问题在于，一旦业务发生变化，出现了新的参数，势必要修改<code>IAuthService</code>接口，添加新的接口方法，导致接口不稳定。</p>
-<p>我们可以定义一个通用稳定的认证授权接口：</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AuthParam</span> </span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">trait</span> <span class="title">IAuthService</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 稳定的授权接口</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">auth</span></span>(p: <span class="type">AuthParam</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 默认接口服务实现</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AuthService</span> <span class="keyword">extends</span> <span class="title">IAuthService</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">auth</span></span>(p: <span class="type">AuthParam</span>) = &#123;</span><br><span class="line">        println(<span class="string">"默认鉴权服务请求"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>可以对<code>AuthService</code>类进行隐式转换，增加<code>TCP</code>服务鉴权方式：</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TcpAuthMsg</span> </span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">tcpAuthService</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 隐式类转换</span></span><br><span class="line">    <span class="keyword">implicit</span> <span class="class"><span class="keyword">class</span> <span class="title">TcpAuth</span>(<span class="params">authService: <span class="type">AuthService</span></span>) </span>&#123;</span><br><span class="line">		<span class="function"><span class="keyword">def</span> <span class="title">auth</span></span>(p: <span class="type">TcpAuthMsg</span>) = &#123;</span><br><span class="line">			println(<span class="string">"TCP鉴权服务请求"</span>)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>那么就可以在需要调用TCP方式时导入该隐式转换：</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Test</span> <span class="keyword">extends</span> <span class="title">App</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 导入隐式转换</span></span><br><span class="line">	<span class="keyword">import</span> tcpAuthService._</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 使用Tcp授权认证</span></span><br><span class="line">	<span class="keyword">val</span> p = <span class="keyword">new</span> <span class="type">TcpAuthMsg</span>()</span><br><span class="line">	<span class="keyword">val</span> authService = <span class="keyword">new</span> <span class="type">AuthService</span>()</span><br><span class="line">	authService.auth(p)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 运行结果:</span></span><br><span class="line"><span class="comment">// &gt; scala auth_implicit.scala</span></span><br><span class="line"><span class="comment">// TCP鉴权服务请求</span></span><br></pre></td></tr></table></figure>
-<p>通过这个例子可知，通过类的隐式转换可以在不修改原有系统代码之下，对类进行方法重载，提升接口的稳定性。</p>
-<p>当然，万事都是一把双刃剑，<code>implicit</code>使得Scala变的非常灵活，但增加了开发者阅读代码的难度，因为你不知道作者在哪些地方实现了<code>implicit</code>。</p>
-<p>下面，就让我们来详细看看Scala里支持哪些<code>implicit</code>类型，以及应用隐式转换规则的限定条件。</p>
-<h3 id="隐式转换类型"><a href="#隐式转换类型" class="headerlink" title="隐式转换类型"></a>隐式转换类型</h3><p>Scala隐式转换类型主要包括以下几种类型：隐式参数、隐式试图、隐式类。</p>
-<h4 id="隐式参数"><a href="#隐式参数" class="headerlink" title="隐式参数"></a>隐式参数</h4><blockquote>
-<p>隐式参数是在编译器找不到函数需要某种类型的参数时的一种修复机制。</p>
-</blockquote>
-<p>举个例子：</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">foo</span></span>(amout: <span class="type">Float</span>)(<span class="keyword">implicit</span> rate: <span class="type">Float</span>): <span class="type">Unit</span> = &#123;</span><br><span class="line">        println(amout * rate)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> = &#123;</span><br><span class="line">        <span class="comment">// 隐式参数</span></span><br><span class="line">        <span class="keyword">implicit</span> <span class="keyword">val</span> r = <span class="number">0.13</span>F  <span class="comment">// 定义隐式变量</span></span><br><span class="line">        foo(<span class="number">10</span>)  <span class="comment">// 输出1.3</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>方法<code>foo</code>参数中申明了隐式参数<code>rate</code>（即用<code>implicit</code>标记），在调用<code>foo</code>方法时，Scala编译器会从当前作用域中寻找一个相同类型的隐式变量，作为调用参数。如果没有找到找到，则会报错。</p>
-<h4 id="隐式视图"><a href="#隐式视图" class="headerlink" title="隐式视图"></a>隐式视图</h4><blockquote>
-<p>隐式视图，是指把一种类型自动转换到另外一种类型，以符合表达式的要求。</p>
-</blockquote>
-<p>隐式视图定义一般用如下形式：<code>implicit def &lt;ConversionName&gt; (&lt;argumentName&gt;: OriginalType): ViewType</code>。在需要的时候，如果隐式作用域里存在这个定义，它会隐式地把 <code>OriginalType</code> 类型的值转换为<code>ViewType</code> 类型的值。</p>
-<p>隐式视图包含两种转换类型：隐式类型转换以及隐式方法调用。</p>
-<h5 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h5><blockquote>
-<p>隐式类型转换是编译器发现传递的数据类型与申明不一致时，编译器在当前作用域查找类型转换方法，对数据类型进行转换。</p>
-</blockquote>
-<p>举个例子：</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> = &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 隐式类型转换</span></span><br><span class="line">    	<span class="keyword">implicit</span> <span class="function"><span class="keyword">def</span> <span class="title">double2Int</span></span>(d: <span class="type">Double</span>) = d.toInt</span><br><span class="line">    	<span class="keyword">var</span> i : <span class="type">Int</span> = <span class="number">3.5</span></span><br><span class="line">    	println(i)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>变量<code>i</code>申明为<code>Int</code>类型，但是赋值<code>Double</code>类型数据，显然编译通不过。这个时候可以借助隐式类型转换，定义<code>Double</code>转<code>Int</code>规则，编译器就会自动查找该隐式转换，将<code>3.5</code>转换成<code>3</code>，从而达到编译器自动修复效果。</p>
-<h5 id="隐式方法调用"><a href="#隐式方法调用" class="headerlink" title="隐式方法调用"></a>隐式方法调用</h5><blockquote>
-<p>隐式方法调用是当编译器发现一个对象存在未定义的方法调用时，就会在当前作用域中查找是否存在对该对象的类型隐式转换，如果有，就查找转换后的对象是否存在该方法，存在，则调用。</p>
-</blockquote>
-<p>举个例子：</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">Horse</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">drinking</span></span>(): <span class="type">Unit</span> = &#123;</span><br><span class="line">      println(<span class="string">"I can drinking"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">Crow</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="class"><span class="keyword">object</span> <span class="title">drinking</span></span>&#123;</span><br><span class="line">    <span class="comment">// 隐式方法调用</span></span><br><span class="line">    <span class="keyword">implicit</span> <span class="function"><span class="keyword">def</span> <span class="title">extendSkill</span></span>(c: <span class="type">Crow</span>) = <span class="keyword">new</span> <span class="type">Horse</span>()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> = &#123;</span><br><span class="line">    <span class="comment">// 隐式转换调用类中不存在的方法</span></span><br><span class="line">    <span class="keyword">import</span> drinking._</span><br><span class="line">    <span class="keyword">var</span> crow = <span class="keyword">new</span> <span class="type">Crow</span>()</span><br><span class="line">    crow.drinking()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><code>crow</code>对象并没有<code>drinkging()</code>方法定义，但是通过隐式规则转换，可以扩展<code>crow</code>对象功能，使其可以拥有<code>Horse</code>对象的功能。</p>
-<h4 id="隐式类"><a href="#隐式类" class="headerlink" title="隐式类"></a>隐式类</h4><blockquote>
-<p>Scala 2.10引入了一种叫做隐式类的新特性。隐式类指的是用implicit关键字修饰的类。在对应的作用域内，带有这个关键字的类的主构造函数可用于隐式转换。</p>
-</blockquote>
-<p>举个例子：</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">Crow</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="class"><span class="keyword">object</span> <span class="title">crow_eval</span></span>&#123;</span><br><span class="line">    <span class="keyword">implicit</span> <span class="class"><span class="keyword">class</span> <span class="title">Parrot</span>(<span class="params">animal: <span class="type">Crow</span></span>) </span>&#123;</span><br><span class="line">      <span class="function"><span class="keyword">def</span> <span class="title">say</span></span>(say: <span class="type">String</span>): <span class="type">Unit</span> = &#123;println(<span class="string">s"I have the skill of Parrot: <span class="subst">$say</span>"</span>)&#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> = &#123;</span><br><span class="line">    <span class="comment">// 隐式类</span></span><br><span class="line">    <span class="keyword">import</span> crow_eval._</span><br><span class="line">    crow.say(<span class="string">"balabala"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>创建隐式类时，只需要在对应的类前加上<code>implicit</code>关键字。</p>
-<p>使用隐式类时，需要注意以下几点：</p>
+<h3 id="用户替换Java的等价语法"><a href="#用户替换Java的等价语法" class="headerlink" title="用户替换Java的等价语法"></a>用户替换Java的等价语法</h3><h4 id="导入通配符"><a href="#导入通配符" class="headerlink" title="导入通配符"></a>导入通配符</h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java</span></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Scala</span></span><br><span class="line"><span class="keyword">import</span> java.util._</span><br></pre></td></tr></table></figure>
+<p><code>*</code>在Scala中是合法的方法名，所以导入包时要使用<code>_</code>代替。</p>
+<h4 id="类成员默认值"><a href="#类成员默认值" class="headerlink" title="类成员默认值"></a>类成员默认值</h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span></span>&#123;</span><br><span class="line">	<span class="comment">// String类型的默认值为null</span></span><br><span class="line">    <span class="keyword">var</span> s: <span class="type">String</span> = _</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>自动设置类成员变脸的默认值。</p>
+<p>注：该语法只适合于类成员，不适用于局部变量。</p>
+<h4 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h4><p>Java声明可变参数如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printArgs</span><span class="params">(String ... args)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(Object elem: args)&#123;</span><br><span class="line">        System.out.println(elem + <span class="string">" "</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>调用方法如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//传入两个参数</span></span><br><span class="line">printArgs(<span class="string">"a"</span>, <span class="string">"b"</span>);</span><br><span class="line"><span class="comment">//也可以传入一个数组</span></span><br><span class="line">printArgs(<span class="keyword">new</span> String[]&#123;<span class="string">"a"</span>, <span class="string">"b"</span>&#125;);</span><br></pre></td></tr></table></figure>
+<p>在Java中可以直接将数组传给<code>printArgs</code>方法，但在Scala中需要明确的指定是想将集合作为一个独立参数传进去，还是想将集合的元素传进去。如果是后者，则要借助下划线：</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">printArgs(<span class="type">List</span>(<span class="string">"a"</span>, <span class="string">"b"</span>): _*)</span><br></pre></td></tr></table></figure>
+<h4 id="类型通配符"><a href="#类型通配符" class="headerlink" title="类型通配符"></a>类型通配符</h4><p>Java的泛型系统有一个通配符类型，例如List&lt;?&gt;，任意的List<t>类型都是List&lt;?&gt;的子类型，如果我们想编写一个可以打印所有List类型元素的方法，可以如下声明： </t></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printList</span><span class="params">(List&lt;?&gt; list)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(Object elem: list)&#123;</span><br><span class="line">        System.out.println(elem + <span class="string">" "</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对应的Scala版本为：</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printList</span></span>(list: <span class="type">List</span>[_]): <span class="type">Unit</span> =&#123;</span><br><span class="line">   list.foreach(elem =&gt; println(elem + <span class="string">" "</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="模式匹配"><a href="#模式匹配" class="headerlink" title="模式匹配"></a>模式匹配</h3><h4 id="默认匹配"><a href="#默认匹配" class="headerlink" title="默认匹配"></a>默认匹配</h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str <span class="keyword">match</span>&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">"1"</span> =&gt; println(<span class="string">"match 1"</span>)</span><br><span class="line">    <span class="keyword">case</span> _   =&gt; println(<span class="string">"match default"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="匹配集合元素"><a href="#匹配集合元素" class="headerlink" title="匹配集合元素"></a>匹配集合元素</h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//匹配以0开头，长度为三的列表</span></span><br><span class="line">expr <span class="keyword">match</span> &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="type">List</span>(<span class="number">0</span>, _, _) =&gt; println(<span class="string">"found it"</span>)</span><br><span class="line">  <span class="keyword">case</span> _ =&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//匹配以0开头，长度任意的列表</span></span><br><span class="line">expr <span class="keyword">match</span> &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="type">List</span>(<span class="number">0</span>, _*) =&gt; println(<span class="string">"found it"</span>)</span><br><span class="line">  <span class="keyword">case</span> _ =&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//匹配元组元素</span></span><br><span class="line">expr <span class="keyword">match</span> &#123;</span><br><span class="line">  <span class="keyword">case</span> (<span class="number">0</span>, _) =&gt; println(<span class="string">"found it"</span>)</span><br><span class="line">  <span class="keyword">case</span> _ =&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//将首元素赋值给head变量</span></span><br><span class="line"><span class="keyword">val</span> <span class="type">List</span>(head, _*) = <span class="type">List</span>(<span class="string">"a"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="Scala特有语法"><a href="#Scala特有语法" class="headerlink" title="Scala特有语法"></a>Scala特有语法</h3><h4 id="访问Tuple元素"><a href="#访问Tuple元素" class="headerlink" title="访问Tuple元素"></a>访问Tuple元素</h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> t = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">println(t._1, t._2, t._3)</span><br></pre></td></tr></table></figure>
+<h4 id="简写函数字面量（function-literal）"><a href="#简写函数字面量（function-literal）" class="headerlink" title="简写函数字面量（function literal）"></a>简写函数字面量（function literal）</h4><p>如果函数的参数在函数体内只出现一次，则可以使用下划线代替： </p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> f1 = (_: <span class="type">Int</span>) + (_: <span class="type">Int</span>)</span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line"><span class="keyword">val</span> f2 = (x: <span class="type">Int</span>, y: <span class="type">Int</span>) =&gt; x + y</span><br><span class="line"></span><br><span class="line">list.foreach(println(_))</span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line">list.foreach(e =&gt; println(e))</span><br><span class="line"></span><br><span class="line">list.filter(_ &gt; <span class="number">0</span>)</span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line">list.filter(x =&gt; x &gt; <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="定义一元操作符"><a href="#定义一元操作符" class="headerlink" title="定义一元操作符"></a>定义一元操作符</h4><p>在Scala中，操作符其实就是方法，例如<code>1 + 1</code>等价于<code>1.+(1)</code>，利用下划线我们可以定义自己的左置操作符，例如Scala中的负数就是用左置操作符实现的： </p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">-2</span></span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line"><span class="number">2.</span>unary_-</span><br></pre></td></tr></table></figure>
+<h4 id="定义赋值操作符"><a href="#定义赋值操作符" class="headerlink" title="定义赋值操作符"></a>定义赋值操作符</h4><p>通过下划线实现赋值操作符，从而可以精确地控制赋值过程： </p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</span><br><span class="line">     <span class="function"><span class="keyword">def</span> <span class="title">name</span> </span>= &#123; <span class="string">"foo"</span> &#125;</span><br><span class="line">     <span class="function"><span class="keyword">def</span> <span class="title">name_=</span></span>(str: <span class="type">String</span>) &#123;</span><br><span class="line">     println(<span class="string">"set name "</span> + str)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> m = <span class="keyword">new</span> <span class="type">Foo</span>()</span><br><span class="line">m.name = <span class="string">"Foo"</span> <span class="comment">//等价于: m.name_=("Foo")</span></span><br></pre></td></tr></table></figure>
+<h4 id="定义部分应用函数（partially-applied-function）"><a href="#定义部分应用函数（partially-applied-function）" class="headerlink" title="定义部分应用函数（partially applied function）"></a>定义部分应用函数（partially applied function）</h4><p>可以为某个函数只提供部分参数进行调用，返回的结果是一个新的函数，即部分应用函数。因为只提供了部分参数，所以部分应用函数也因此而得名。 </p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sum</span></span>(a: <span class="type">Int</span>, b: <span class="type">Int</span>, c: <span class="type">Int</span>) = a + b + c</span><br><span class="line"><span class="keyword">val</span> b = sum(<span class="number">1</span>, _: <span class="type">Int</span>, <span class="number">3</span>)</span><br><span class="line">b: <span class="type">Int</span> =&gt; <span class="type">Int</span> = &lt;function1&gt;</span><br><span class="line">b(<span class="number">2</span>) <span class="comment">//6</span></span><br></pre></td></tr></table></figure>
+<h4 id="将方法转换成函数"><a href="#将方法转换成函数" class="headerlink" title="将方法转换成函数"></a>将方法转换成函数</h4><p>Scala中方法和函数是两个不同的概念，方法无法作为参数进行传递，也无法赋值给变量，但是函数是可以的。在Scala中，利用下划线可以将方法转换成函数： </p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将println方法转换成函数，并赋值给p</span></span><br><span class="line"><span class="keyword">val</span> p = println _  </span><br><span class="line"><span class="comment">//p: (Any) =&gt; Unit</span></span><br></pre></td></tr></table></figure>
+<p>注：</p>
 <ul>
-<li>构造参数有且只有一个，且为非隐式参数</li>
-<li>隐式类必须被定义在类、伴生对象和包对象里</li>
-<li>隐式类不能是<code>case class</code>（<code>case class</code>会自动生成伴生对象，与上一条矛盾）</li>
-<li>作用域内不能有与之同名的标识符</li>
-</ul>
-<h3 id="隐式解析机制"><a href="#隐式解析机制" class="headerlink" title="隐式解析机制"></a>隐式解析机制</h3><p>编译器是如何查找到缺失信息的，解析具有以下两种规则：</p>
-<ol>
-<li><p>首先会在当前代码作用域下查找隐式实体（隐式方法、隐式类、隐式对象）</p>
-</li>
-<li><p>如果第一条规则查找隐式实体失败，会继续在隐式参数的类型的作用域里查找。</p>
-<p>类型的作用域是指与该类型相关联的全部伴生模块，一个隐式实体的类型T，它的查找范围如下：</p>
-<ul>
-<li>如果T被定义为<code>T with A with B with C</code>，那么A、B、C都是T的部分，在T的隐式解析过程中，它们的伴生对象都会被搜索</li>
-<li>如果T是参数化类型，那么类型参数和与类型参数相关联的部分都算作T的部分，比如<code>List[String]</code>的隐式搜索会搜索List的伴生对象和String的伴生对象</li>
-<li>如果T是一个单例类型<code>p.T</code>，即T是属于某个p对象内，那么这个p对象也会被搜索</li>
-<li>如果T是个类型注入<code>S#T</code>，那么S和T都会被搜索</li>
+<li>方法和函数的不同：<ul>
+<li>方法是一个以<code>def</code>开头的带有参数列表的一个逻辑操作块，比如object或者class的成员方法</li>
+<li>函数是一个赋值给一个变量（或者常量）的匿名方法，并且通过<code>=&gt;</code>转换符号跟上逻辑代码块的一个表达式</li>
 </ul>
 </li>
-</ol>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><code>implicit</code>是Scala语言中处理编译类型错误的一种修复机制，利用该机制，可以编写出任意参数和返回值的多态方法（<code>Ad-hoc polymorphism</code>任意多态），实现任意多态。</p>
-<p>隐式转换一般需要具备以下前提条件：</p>
-<ul>
-<li>不存在二义性</li>
-<li>隐式操作不能嵌套使用，比如需要<code>C</code>类型参数，而实际类型为<code>A</code>，作用域内存在<code>A =&gt; B</code>,<code>B =&gt; C</code>的隐式方法，Scala编译器不会尝试先调用<code>A =&gt; B</code> ,再调用<code>B =&gt; C</code>。 </li>
-<li>代码能够在不使用隐式转换的前提下能编译通过，就不会进行进行隐式转换</li>
 </ul>
-<p>在实际开发过程中，如果对隐式规则掌握不清楚，往往出了问题会无从查起，笔者建议谨慎使用。</p>
-<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
-<li><a href="https://www.jianshu.com/p/1d119c937015" target="_blank" rel="noopener">Scala中的Implicit详解</a></li>
-<li><a href="https://docs.scala-lang.org/zh-cn/overviews/core/implicit-classes.html" target="_blank" rel="noopener">https://docs.scala-lang.org/zh-cn/overviews/core/implicit-classes.html</a></li>
-<li><a href="https://blog.csdn.net/oopsoom/article/details/24643869" target="_blank" rel="noopener">scala implicit 隐式转换</a></li>
-</ol>
 
       
     </div>
@@ -629,7 +566,7 @@
     <strong>本文作者： </strong>Moz</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://tryanswer.github.io/2018/05/24/scala-implicit/" title="Scala 隐式转换implicit详解">https://tryanswer.github.io/2018/05/24/scala-implicit/</a>
+    <a href="https://tryanswer.github.io/2018/05/30/scala-underscore/" title="Scala 下划线的用途">https://tryanswer.github.io/2018/05/30/scala-underscore/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -642,9 +579,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/implicit/" rel="tag"># implicit</a>
-          
-            <a href="/tags/隐式转换/" rel="tag"># 隐式转换</a>
+            <a href="/tags/underscore/" rel="tag"># underscore</a>
           
         </div>
       
@@ -672,8 +607,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/17/py-int-confusing/" rel="next" title="Python 小整数与大整数的处理机制以及整体解释与逐行解释的区别">
-                <i class="fa fa-chevron-left"></i> Python 小整数与大整数的处理机制以及整体解释与逐行解释的区别
+              <a href="/2018/05/25/n32-longest-valid-parentheses/" rel="next" title="LeetCode32 最长有效括号">
+                <i class="fa fa-chevron-left"></i> LeetCode32 最长有效括号
               </a>
             
           </div>
@@ -681,10 +616,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/25/graph-analysis/" rel="prev" title="图分析总结">
-                图分析总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -956,7 +887,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Implicit简介"><span class="nav-number">1.</span> <span class="nav-text">Implicit简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐式转换类型"><span class="nav-number">2.</span> <span class="nav-text">隐式转换类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#隐式参数"><span class="nav-number">2.1.</span> <span class="nav-text">隐式参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#隐式视图"><span class="nav-number">2.2.</span> <span class="nav-text">隐式视图</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#隐式类型转换"><span class="nav-number">2.2.1.</span> <span class="nav-text">隐式类型转换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#隐式方法调用"><span class="nav-number">2.2.2.</span> <span class="nav-text">隐式方法调用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#隐式类"><span class="nav-number">2.3.</span> <span class="nav-text">隐式类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐式解析机制"><span class="nav-number">3.</span> <span class="nav-text">隐式解析机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文献"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#用户替换Java的等价语法"><span class="nav-number">1.</span> <span class="nav-text">用户替换Java的等价语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#导入通配符"><span class="nav-number">1.1.</span> <span class="nav-text">导入通配符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类成员默认值"><span class="nav-number">1.2.</span> <span class="nav-text">类成员默认值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可变参数"><span class="nav-number">1.3.</span> <span class="nav-text">可变参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型通配符"><span class="nav-number">1.4.</span> <span class="nav-text">类型通配符</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模式匹配"><span class="nav-number">2.</span> <span class="nav-text">模式匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#默认匹配"><span class="nav-number">2.1.</span> <span class="nav-text">默认匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#匹配集合元素"><span class="nav-number">2.2.</span> <span class="nav-text">匹配集合元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scala特有语法"><span class="nav-number">3.</span> <span class="nav-text">Scala特有语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#访问Tuple元素"><span class="nav-number">3.1.</span> <span class="nav-text">访问Tuple元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#简写函数字面量（function-literal）"><span class="nav-number">3.2.</span> <span class="nav-text">简写函数字面量（function literal）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义一元操作符"><span class="nav-number">3.3.</span> <span class="nav-text">定义一元操作符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义赋值操作符"><span class="nav-number">3.4.</span> <span class="nav-text">定义赋值操作符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义部分应用函数（partially-applied-function）"><span class="nav-number">3.5.</span> <span class="nav-text">定义部分应用函数（partially applied function）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#将方法转换成函数"><span class="nav-number">3.6.</span> <span class="nav-text">将方法转换成函数</span></a></li></ol></li></ol></div>
             
 
           </div>
