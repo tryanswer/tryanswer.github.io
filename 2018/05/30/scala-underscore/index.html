@@ -127,18 +127,18 @@
 
 
 
-  <meta name="description" content="转载自 Scala基础 - 下划线使用指南 @joymufeng  用户替换Java的等价语法导入通配符12345// Javaimport java.util.*;// Scalaimport java.util._ *在Scala中是合法的方法名，所以导入包时要使用_代替。 类成员默认值1234class Foo&amp;#123;	// String类型的默认值为null    var s: St">
+  <meta name="description" content="转载自 Scala基础 - 下划线使用指南 @joymufeng">
 <meta name="keywords" content="underscore">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Scala 下划线的用途">
 <meta property="og:url" content="https://tryanswer.github.io/2018/05/30/scala-underscore/index.html">
 <meta property="og:site_name" content="Moz的博客">
-<meta property="og:description" content="转载自 Scala基础 - 下划线使用指南 @joymufeng  用户替换Java的等价语法导入通配符12345// Javaimport java.util.*;// Scalaimport java.util._ *在Scala中是合法的方法名，所以导入包时要使用_代替。 类成员默认值1234class Foo&amp;#123;	// String类型的默认值为null    var s: St">
+<meta property="og:description" content="转载自 Scala基础 - 下划线使用指南 @joymufeng">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-30T10:53:36.208Z">
+<meta property="og:updated_time" content="2018-05-30T13:11:26.742Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Scala 下划线的用途">
-<meta name="twitter:description" content="转载自 Scala基础 - 下划线使用指南 @joymufeng  用户替换Java的等价语法导入通配符12345// Javaimport java.util.*;// Scalaimport java.util._ *在Scala中是合法的方法名，所以导入包时要使用_代替。 类成员默认值1234class Foo&amp;#123;	// String类型的默认值为null    var s: St">
+<meta name="twitter:description" content="转载自 Scala基础 - 下划线使用指南 @joymufeng">
 
 
 
@@ -399,7 +399,7 @@
                 
               
 
-              <time title="创建时间：2018-05-30 17:21:38 / 修改时间：18:53:36" itemprop="dateCreated datePublished" datetime="2018-05-30T17:21:38+08:00">2018-05-30</time>
+              <time title="创建时间：2018-05-30 17:21:38 / 修改时间：21:11:26" itemprop="dateCreated datePublished" datetime="2018-05-30T17:21:38+08:00">2018-05-30</time>
             
 
             
@@ -476,9 +476,10 @@
         <blockquote>
 <p>转载自 <a href="https://my.oschina.net/joymufeng/blog/863823" target="_blank" rel="noopener">Scala基础 - 下划线使用指南</a> <a href="https://my.oschina.net/joymufeng/home" target="_blank" rel="noopener">@joymufeng</a></p>
 </blockquote>
+<a id="more"></a>
 <h3 id="用户替换Java的等价语法"><a href="#用户替换Java的等价语法" class="headerlink" title="用户替换Java的等价语法"></a>用户替换Java的等价语法</h3><h4 id="导入通配符"><a href="#导入通配符" class="headerlink" title="导入通配符"></a>导入通配符</h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java</span></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Scala</span></span><br><span class="line"><span class="keyword">import</span> java.util._</span><br></pre></td></tr></table></figure>
 <p><code>*</code>在Scala中是合法的方法名，所以导入包时要使用<code>_</code>代替。</p>
-<h4 id="类成员默认值"><a href="#类成员默认值" class="headerlink" title="类成员默认值"></a>类成员默认值</h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span></span>&#123;</span><br><span class="line">	<span class="comment">// String类型的默认值为null</span></span><br><span class="line">    <span class="keyword">var</span> s: <span class="type">String</span> = _</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="类成员默认值"><a href="#类成员默认值" class="headerlink" title="类成员默认值"></a>类成员默认值</h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span></span>&#123;</span><br><span class="line">    <span class="comment">// String类型的默认值为null</span></span><br><span class="line">    <span class="keyword">var</span> s: <span class="type">String</span> = _</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>自动设置类成员变脸的默认值。</p>
 <p>注：该语法只适合于类成员，不适用于局部变量。</p>
 <h4 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h4><p>Java声明可变参数如下：</p>

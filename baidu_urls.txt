@@ -1,0 +1,10 @@
+https://tryanswer.github.io/2018/05/30/scala-underscore/
+https://tryanswer.github.io/2018/05/25/n32-longest-valid-parentheses/
+https://tryanswer.github.io/2018/05/25/graph-analysis/
+https://tryanswer.github.io/2018/05/24/scala-implicit/
+https://tryanswer.github.io/2018/05/17/py-int-confusing/
+https://tryanswer.github.io/2018/05/04/n31-next-permutation/
+https://tryanswer.github.io/2018/05/03/n30-substring-with-concatenation-of-all-words/
+https://tryanswer.github.io/2018/05/01/n29-divide-two-integers/
+https://tryanswer.github.io/2018/04/20/n25-reverse-nodes-in-k-group/
+https://tryanswer.github.io/2018/04/15/n24-swap-nodes-in-pairs/

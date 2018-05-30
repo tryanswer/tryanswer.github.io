@@ -128,7 +128,7 @@
 
 
   <meta name="description" content="LeetCode第29题 问题描述给定两个整数，被除数 dividend 和除数 divisor。将两数相除，要求不使用乘法、除法和 mod 运算符。 返回被除数 dividend 除以除数 divisor 得到的商。 示例 1: 12输入: dividend = 10, divisor = 3输出: 3 示例 2: 12输入: dividend = 7, divisor = -3输出: -2 说">
-<meta name="keywords" content="数学,除法,递归">
+<meta name="keywords" content="递归,数学,除法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode29 两数相除">
 <meta property="og:url" content="https://tryanswer.github.io/2018/05/01/n29-divide-two-integers/index.html">
@@ -513,7 +513,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">令商result = 1 </span><br><span class="line">计算商是否为负数 neg = (dividend &lt; 0) ^ (divisor &lt; 0)</span><br><span class="line">取被除数、除数绝对值 dividend = abs(dividend), divisor = abs(divisor)</span><br><span class="line">假如 dividend &lt; divisor, 则返回0</span><br><span class="line">初始化count, n = 1, divisor</span><br><span class="line">while (n &lt;&lt; 1) &lt;= dividend</span><br><span class="line">   n &lt;&lt;= 1</span><br><span class="line">   count &lt;&lt;= 1</span><br><span class="line">result += count</span><br><span class="line">令dividend = dividend - n, 重复步骤4</span><br><span class="line">如果reg是负数, 则返回-result, 否则返回result (需考虑整数溢出情况)</span><br></pre></td></tr></table></figure>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">divide</span><span class="params">(self, dividend, divisor)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type dividend: int</span></span><br><span class="line"><span class="string">        :type divisor: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        neg  = (dividend &lt; <span class="number">0</span>) ^ (divisor &lt; <span class="number">0</span>)</span><br><span class="line">        dividend, divisor = abs(dividend), abs(divisor)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> dividend &lt; divisor:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> divisor == <span class="number">1</span>:  <span class="comment"># 当除数是1时，商直接设置为dividend</span></span><br><span class="line">            result = dividend</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            result = <span class="number">1</span></span><br><span class="line">            tmp = divisor</span><br><span class="line">            <span class="keyword">while</span> (tmp &lt;&lt; <span class="number">1</span>) &lt;= dividend:</span><br><span class="line">                tmp &lt;&lt;= <span class="number">1</span></span><br><span class="line">                result &lt;&lt;= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">            result += self.divide(dividend - tmp, divisor)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 处理正整数除法溢出的情况</span></span><br><span class="line">        <span class="keyword">if</span> result &gt;= <span class="number">2</span> ** <span class="number">31</span> <span class="keyword">and</span> <span class="keyword">not</span> neg:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">2</span> ** <span class="number">31</span> - <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> -result <span class="keyword">if</span> neg <span class="keyword">else</span> result</span><br></pre></td></tr></table></figure>
 <p>以上代码使用<code>Python3</code>编写，注意<code>Python3</code>没有<code>long</code>类型，<code>int</code>整形没有大小限制。</p>
-
+<div><h1>推荐文章<span style="font-size:0.45em; color:gray">（由<a href="https://github.com/huiwang/hexo-recommended-posts">hexo文章推荐插件</a>驱动）</span></h1><ul><li><a href="https://tryanswer.github.io/2018/04/20/n25-reverse-nodes-in-k-group/">LeetCode25 k个一组翻转链表</a></li><li><a href="http://www.hui-wang.info/2017/10/27/计算机中的数学/">计算机中的数学</a></li><li><a href="http://www.hui-wang.info/2017/11/25/数学之美：不能再凑了/">数学之美：不能再凑了</a></li></ul></div>
       
     </div>
 
@@ -592,11 +592,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/递归/" rel="tag"># 递归</a>
+          
             <a href="/tags/数学/" rel="tag"># 数学</a>
           
             <a href="/tags/除法/" rel="tag"># 除法</a>
-          
-            <a href="/tags/递归/" rel="tag"># 递归</a>
           
         </div>
       
@@ -908,7 +908,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题思路"><span class="nav-number">2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题思路"><span class="nav-number">2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number"></span> <span class="nav-text">推荐文章（由hexo文章推荐插件驱动）</span></a></div>
             
 
           </div>

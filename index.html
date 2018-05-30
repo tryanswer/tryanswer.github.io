@@ -400,7 +400,7 @@
                 
               
 
-              <time title="创建时间：2018-05-30 17:21:38 / 修改时间：18:53:36" itemprop="dateCreated datePublished" datetime="2018-05-30T17:21:38+08:00">2018-05-30</time>
+              <time title="创建时间：2018-05-30 17:21:38 / 修改时间：21:11:26" itemprop="dateCreated datePublished" datetime="2018-05-30T17:21:38+08:00">2018-05-30</time>
             
 
             
@@ -457,48 +457,16 @@
 
       
         
-          
-            <blockquote>
+          <blockquote>
 <p>转载自 <a href="https://my.oschina.net/joymufeng/blog/863823" target="_blank" rel="noopener">Scala基础 - 下划线使用指南</a> <a href="https://my.oschina.net/joymufeng/home" target="_blank" rel="noopener">@joymufeng</a></p>
 </blockquote>
-<h3 id="用户替换Java的等价语法"><a href="#用户替换Java的等价语法" class="headerlink" title="用户替换Java的等价语法"></a>用户替换Java的等价语法</h3><h4 id="导入通配符"><a href="#导入通配符" class="headerlink" title="导入通配符"></a>导入通配符</h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java</span></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Scala</span></span><br><span class="line"><span class="keyword">import</span> java.util._</span><br></pre></td></tr></table></figure>
-<p><code>*</code>在Scala中是合法的方法名，所以导入包时要使用<code>_</code>代替。</p>
-<h4 id="类成员默认值"><a href="#类成员默认值" class="headerlink" title="类成员默认值"></a>类成员默认值</h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span></span>&#123;</span><br><span class="line">	<span class="comment">// String类型的默认值为null</span></span><br><span class="line">    <span class="keyword">var</span> s: <span class="type">String</span> = _</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>自动设置类成员变脸的默认值。</p>
-<p>注：该语法只适合于类成员，不适用于局部变量。</p>
-<h4 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h4><p>Java声明可变参数如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printArgs</span><span class="params">(String ... args)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(Object elem: args)&#123;</span><br><span class="line">        System.out.println(elem + <span class="string">" "</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>调用方法如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//传入两个参数</span></span><br><span class="line">printArgs(<span class="string">"a"</span>, <span class="string">"b"</span>);</span><br><span class="line"><span class="comment">//也可以传入一个数组</span></span><br><span class="line">printArgs(<span class="keyword">new</span> String[]&#123;<span class="string">"a"</span>, <span class="string">"b"</span>&#125;);</span><br></pre></td></tr></table></figure>
-<p>在Java中可以直接将数组传给<code>printArgs</code>方法，但在Scala中需要明确的指定是想将集合作为一个独立参数传进去，还是想将集合的元素传进去。如果是后者，则要借助下划线：</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">printArgs(<span class="type">List</span>(<span class="string">"a"</span>, <span class="string">"b"</span>): _*)</span><br></pre></td></tr></table></figure>
-<h4 id="类型通配符"><a href="#类型通配符" class="headerlink" title="类型通配符"></a>类型通配符</h4><p>Java的泛型系统有一个通配符类型，例如List&lt;?&gt;，任意的List<t>类型都是List&lt;?&gt;的子类型，如果我们想编写一个可以打印所有List类型元素的方法，可以如下声明： </t></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printList</span><span class="params">(List&lt;?&gt; list)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(Object elem: list)&#123;</span><br><span class="line">        System.out.println(elem + <span class="string">" "</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>对应的Scala版本为：</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printList</span></span>(list: <span class="type">List</span>[_]): <span class="type">Unit</span> =&#123;</span><br><span class="line">   list.foreach(elem =&gt; println(elem + <span class="string">" "</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="模式匹配"><a href="#模式匹配" class="headerlink" title="模式匹配"></a>模式匹配</h3><h4 id="默认匹配"><a href="#默认匹配" class="headerlink" title="默认匹配"></a>默认匹配</h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str <span class="keyword">match</span>&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">"1"</span> =&gt; println(<span class="string">"match 1"</span>)</span><br><span class="line">    <span class="keyword">case</span> _   =&gt; println(<span class="string">"match default"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="匹配集合元素"><a href="#匹配集合元素" class="headerlink" title="匹配集合元素"></a>匹配集合元素</h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//匹配以0开头，长度为三的列表</span></span><br><span class="line">expr <span class="keyword">match</span> &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="type">List</span>(<span class="number">0</span>, _, _) =&gt; println(<span class="string">"found it"</span>)</span><br><span class="line">  <span class="keyword">case</span> _ =&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//匹配以0开头，长度任意的列表</span></span><br><span class="line">expr <span class="keyword">match</span> &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="type">List</span>(<span class="number">0</span>, _*) =&gt; println(<span class="string">"found it"</span>)</span><br><span class="line">  <span class="keyword">case</span> _ =&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//匹配元组元素</span></span><br><span class="line">expr <span class="keyword">match</span> &#123;</span><br><span class="line">  <span class="keyword">case</span> (<span class="number">0</span>, _) =&gt; println(<span class="string">"found it"</span>)</span><br><span class="line">  <span class="keyword">case</span> _ =&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//将首元素赋值给head变量</span></span><br><span class="line"><span class="keyword">val</span> <span class="type">List</span>(head, _*) = <span class="type">List</span>(<span class="string">"a"</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="Scala特有语法"><a href="#Scala特有语法" class="headerlink" title="Scala特有语法"></a>Scala特有语法</h3><h4 id="访问Tuple元素"><a href="#访问Tuple元素" class="headerlink" title="访问Tuple元素"></a>访问Tuple元素</h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> t = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">println(t._1, t._2, t._3)</span><br></pre></td></tr></table></figure>
-<h4 id="简写函数字面量（function-literal）"><a href="#简写函数字面量（function-literal）" class="headerlink" title="简写函数字面量（function literal）"></a>简写函数字面量（function literal）</h4><p>如果函数的参数在函数体内只出现一次，则可以使用下划线代替： </p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> f1 = (_: <span class="type">Int</span>) + (_: <span class="type">Int</span>)</span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line"><span class="keyword">val</span> f2 = (x: <span class="type">Int</span>, y: <span class="type">Int</span>) =&gt; x + y</span><br><span class="line"></span><br><span class="line">list.foreach(println(_))</span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line">list.foreach(e =&gt; println(e))</span><br><span class="line"></span><br><span class="line">list.filter(_ &gt; <span class="number">0</span>)</span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line">list.filter(x =&gt; x &gt; <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-<h4 id="定义一元操作符"><a href="#定义一元操作符" class="headerlink" title="定义一元操作符"></a>定义一元操作符</h4><p>在Scala中，操作符其实就是方法，例如<code>1 + 1</code>等价于<code>1.+(1)</code>，利用下划线我们可以定义自己的左置操作符，例如Scala中的负数就是用左置操作符实现的： </p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">-2</span></span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line"><span class="number">2.</span>unary_-</span><br></pre></td></tr></table></figure>
-<h4 id="定义赋值操作符"><a href="#定义赋值操作符" class="headerlink" title="定义赋值操作符"></a>定义赋值操作符</h4><p>通过下划线实现赋值操作符，从而可以精确地控制赋值过程： </p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</span><br><span class="line">     <span class="function"><span class="keyword">def</span> <span class="title">name</span> </span>= &#123; <span class="string">"foo"</span> &#125;</span><br><span class="line">     <span class="function"><span class="keyword">def</span> <span class="title">name_=</span></span>(str: <span class="type">String</span>) &#123;</span><br><span class="line">     println(<span class="string">"set name "</span> + str)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> m = <span class="keyword">new</span> <span class="type">Foo</span>()</span><br><span class="line">m.name = <span class="string">"Foo"</span> <span class="comment">//等价于: m.name_=("Foo")</span></span><br></pre></td></tr></table></figure>
-<h4 id="定义部分应用函数（partially-applied-function）"><a href="#定义部分应用函数（partially-applied-function）" class="headerlink" title="定义部分应用函数（partially applied function）"></a>定义部分应用函数（partially applied function）</h4><p>可以为某个函数只提供部分参数进行调用，返回的结果是一个新的函数，即部分应用函数。因为只提供了部分参数，所以部分应用函数也因此而得名。 </p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sum</span></span>(a: <span class="type">Int</span>, b: <span class="type">Int</span>, c: <span class="type">Int</span>) = a + b + c</span><br><span class="line"><span class="keyword">val</span> b = sum(<span class="number">1</span>, _: <span class="type">Int</span>, <span class="number">3</span>)</span><br><span class="line">b: <span class="type">Int</span> =&gt; <span class="type">Int</span> = &lt;function1&gt;</span><br><span class="line">b(<span class="number">2</span>) <span class="comment">//6</span></span><br></pre></td></tr></table></figure>
-<h4 id="将方法转换成函数"><a href="#将方法转换成函数" class="headerlink" title="将方法转换成函数"></a>将方法转换成函数</h4><p>Scala中方法和函数是两个不同的概念，方法无法作为参数进行传递，也无法赋值给变量，但是函数是可以的。在Scala中，利用下划线可以将方法转换成函数： </p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将println方法转换成函数，并赋值给p</span></span><br><span class="line"><span class="keyword">val</span> p = println _  </span><br><span class="line"><span class="comment">//p: (Any) =&gt; Unit</span></span><br></pre></td></tr></table></figure>
-<p>注：</p>
-<ul>
-<li>方法和函数的不同：<ul>
-<li>方法是一个以<code>def</code>开头的带有参数列表的一个逻辑操作块，比如object或者class的成员方法</li>
-<li>函数是一个赋值给一个变量（或者常量）的匿名方法，并且通过<code>=&gt;</code>转换符号跟上逻辑代码块的一个表达式</li>
-</ul>
-</li>
-</ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/30/scala-underscore/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2020,14 +1988,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2018/04/15/n24-swap-nodes-in-pairs/" rel="bookmark">LeetCode24 两两交换链表中的节点</a></div>
+      <div class="popular-posts-title"><a href="/2018/04/13/n23-merge-k-sorted-lists/" rel="bookmark">LeetCode23 合并K个有序链表</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2018/04/13/n23-merge-k-sorted-lists/" rel="bookmark">LeetCode23 合并K个有序链表</a></div>
+      <div class="popular-posts-title"><a href="/2018/04/15/n24-swap-nodes-in-pairs/" rel="bookmark">LeetCode24 两两交换链表中的节点</a></div>
       
     </li>
   
