@@ -135,7 +135,7 @@
 <meta property="og:site_name" content="Moz的博客">
 <meta property="og:description" content="图分析是知识图谱（Knowledge Graph）图结构消费的重要组成部分，基于图分析算法的应用近年来层出不穷，比如：Palantir利用关联分析指导复杂战场环境下的军事行动、天眼查发现企业关联关系、拓尔思水晶球、宜信金融反欺诈等等。 本文首先对图分析算法进行归纳总结，后期将结合现有的工具，详细介绍图分析每个算法的实现以及应用案例。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-30T05:30:40.087Z">
+<meta property="og:updated_time" content="2018-05-30T05:33:43.313Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图分析总结">
 <meta name="twitter:description" content="图分析是知识图谱（Knowledge Graph）图结构消费的重要组成部分，基于图分析算法的应用近年来层出不穷，比如：Palantir利用关联分析指导复杂战场环境下的军事行动、天眼查发现企业关联关系、拓尔思水晶球、宜信金融反欺诈等等。 本文首先对图分析算法进行归纳总结，后期将结合现有的工具，详细介绍图分析每个算法的实现以及应用案例。">
@@ -416,7 +416,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-05-30 13:30:40" itemprop="dateModified" datetime="2018-05-30T13:30:40+08:00">2018-05-30</time>
+                <time title="修改时间：2018-05-30 13:33:43" itemprop="dateModified" datetime="2018-05-30T13:33:43+08:00">2018-05-30</time>
               
             
           </span>
@@ -710,7 +710,7 @@
 <tbody>
 <tr>
 <td>Subdue</td>
-<td>基于最小描述长度原则 <strong>MDL</strong>来发现子结构<br>- 定义：$S$是图$G$的一个子结构，$I(S)$表示子结构$S$的描述长度， &vert;  &vert; $I(G&#124;S)$表示在图$G$中使用单个顶点替换子结构$S$后得到的图的描述长度<br><br>- 寻找最优子结构：使得$I(S) = v\ bits + r\ bits + e\ bits$最小的子结构$S$，$S$即为频繁子图。<br>其中$v\ bits$表示表示编码图的顶点标签所需的$bit$位数：<br>$$v\ bits = lg\ v + v\ lg\ l_u$$<br>$r\ bits$表示编码邻接矩阵$A$的各行所需的$bit$位数：<br>$$r\ bits = lg(b+1) + \sum_{i=0}^v lg(b+1) \ +lg\ C(v,k_i)$$ <br>其中$b=max_ik_i$，$k_i$表示邻接矩阵$A$第$i$行中为$1$的个数<br>$e\ bits$表示编码邻接矩阵$A$中以$A[i,j]=1$所表示的边所需的$bit$位数：<br>$$e\ bits=lg\ m\  +\ \sum_{i=1}^{v}\sum_{j=1}^{v} lg\ m + e(i,j)[1+lg\ l_u]$$<br><br>- 过程：初始枚举单节点最优子结构，然后由此进行迭代。在每次迭代中，算法选择最优子结构后，通过增加一个顶点扩展当前子结构，直到所有的最优子结构都被列出或者所需考虑的候选最优子结构数量达到一定限制</td>
+<td>基于最小描述长度原则 <strong>MDL</strong>来发现子结构<br>- 定义：$S$是图$G​$的一个子结构，$I(S)​$表示子结构$S​$的描述长度，$I(G&#124;S)​$表示在图$G​$中使用单个顶点替换子结构$S​$后得到的图的描述长度<br><br>- 寻找最优子结构：使得$I(S) = v\ bits + r\ bits + e\ bits​$最小的子结构$S​$，$S​$即为频繁子图。<br>其中$v\ bits​$表示表示编码图的顶点标签所需的$bit​$位数：<br>$$v\ bits = lg\ v + v\ lg\ l_u​$$<br>$r\ bits​$表示编码邻接矩阵$A​$的各行所需的$bit​$位数：<br>$$r\ bits = lg(b+1) + \sum_{i=0}^v lg(b+1) \ +lg\ C(v,k_i)​$$ <br>其中$b=max_ik_i​$，$k_i​$表示邻接矩阵$A​$第$i​$行中为$1​$的个数<br>$e\ bits​$表示编码邻接矩阵$A​$中以$A[i,j]=1​$所表示的边所需的$bit​$位数：<br>$$e\ bits=lg\ m\  +\ \sum_{i=1}^{v}\sum_{j=1}^{v} lg\ m + e(i,j)[1+lg\ l_u]​$$<br><br>- 过程：初始枚举单节点最优子结构，然后由此进行迭代。在每次迭代中，算法选择最优子结构后，通过增加一个顶点扩展当前子结构，直到所有的最优子结构都被列出或者所需考虑的候选最优子结构数量达到一定限制</td>
 <td><a href="http://ailab.wsu.edu/subdue/papers/HolderAAAI-KDD94.pdf" target="_blank" rel="noopener">SUBDUE</a></td>
 </tr>
 <tr>
@@ -1197,6 +1197,40 @@
 
           
           
+
+	  
+    	<div class="links-of-blogroll motion-element links-of-blogroll-block">
+      <div class="links-of-blogroll-title">
+        <!-- modify icon to fire by szw -->
+        <i class="fa fa-history fa-" aria-hidden="true"></i>
+        近期文章
+      </div>
+      <ul class="links-of-blogroll-list">
+        
+        
+          <li>
+            <a href="/2018/05/25/n32-longest-valid-parentheses/" title="LeetCode32 最长有效括号" target="_blank">LeetCode32 最长有效括号</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/25/graph-analysis/" title="图分析总结" target="_blank">图分析总结</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/24/scala-implicit/" title="Scala 隐式转换implicit详解" target="_blank">Scala 隐式转换implicit详解</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/17/py-int-confusing/" title="Python 小整数与大整数的处理机制以及整体解释与逐行解释的区别" target="_blank">Python 小整数与大整数的处理机制以及整体解释与逐行解释的区别</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/04/n31-next-permutation/" title="LeetCode31 下一个排列" target="_blank">LeetCode31 下一个排列</a>
+          </li>
+        
+      </ul>
+    </div>
+
 
           
             
