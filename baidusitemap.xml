@@ -4,6 +4,68 @@
 
     
   <url>
+    <loc>https://tryanswer.github.io/2018/07/11/python-GIL-multithreading-lock/</loc>
+    <lastmod>2018-07-11T03:29:13.155Z</lastmod>
+    <data>
+        <display>
+        <title>Python有GIL，为什么还需要线程同步</title>
+        <pubTime>2018-07-11T03:02:34.000Z</pubTime>
+        
+        <tag>GIL</tag>
+         
+        <tag>multithreading</tag>
+         
+        <tag>多线程</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://tryanswer.github.io/categories/Python/"/>
+          
+             
+              <breadCrumb title="你不知道的Python" url="https://tryanswer.github.io/categories/Python/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://tryanswer.github.io/2018/05/25/graph-analysis/</loc>
+    <lastmod>2018-07-11T03:05:49.753Z</lastmod>
+    <data>
+        <display>
+        <title>图分析总结</title>
+        <pubTime>2018-05-25T04:42:33.000Z</pubTime>
+        
+        <tag>图分析</tag>
+         
+        <tag>图挖掘</tag>
+         
+        <tag>节点中心性</tag>
+         
+        <tag>社区发现</tag>
+         
+        <tag>最短路径</tag>
+         
+        <tag>频繁图模式</tag>
+         
+        <tag>链接预测</tag>
+         
+         
+           
+             
+              <breadCrumb title="知识图谱" url="https://tryanswer.github.io/categories/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
+          
+             
+              <breadCrumb title="图分析" url="https://tryanswer.github.io/categories/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/%E5%9B%BE%E5%88%86%E6%9E%90/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tryanswer.github.io/2018/06/15/n39-combination-sum/</loc>
     <lastmod>2018-06-19T14:38:26.184Z</lastmod>
     <data>
@@ -103,41 +165,6 @@
 
     
   <url>
-    <loc>https://tryanswer.github.io/2018/05/25/graph-analysis/</loc>
-    <lastmod>2018-05-30T05:33:43.313Z</lastmod>
-    <data>
-        <display>
-        <title>图分析总结</title>
-        <pubTime>2018-05-25T04:42:33.000Z</pubTime>
-        
-        <tag>图分析</tag>
-         
-        <tag>图挖掘</tag>
-         
-        <tag>节点中心性</tag>
-         
-        <tag>社区发现</tag>
-         
-        <tag>最短路径</tag>
-         
-        <tag>频繁图模式</tag>
-         
-        <tag>链接预测</tag>
-         
-         
-           
-             
-              <breadCrumb title="知识图谱" url="https://tryanswer.github.io/categories/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
-          
-             
-              <breadCrumb title="图分析" url="https://tryanswer.github.io/categories/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/%E5%9B%BE%E5%88%86%E6%9E%90/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://tryanswer.github.io/2018/05/25/n32-longest-valid-parentheses/</loc>
     <lastmod>2018-05-25T15:06:18.210Z</lastmod>
     <data>
@@ -219,9 +246,9 @@
         <title>LeetCode23 合并K个有序链表</title>
         <pubTime>2018-04-13T13:29:53.000Z</pubTime>
         
-        <tag>堆</tag>
-         
         <tag>链表</tag>
+         
+        <tag>堆</tag>
          
          
            
