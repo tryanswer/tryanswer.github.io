@@ -135,7 +135,7 @@
 <meta property="og:site_name" content="Moz的博客">
 <meta property="og:description" content="在Python中，我们通过使用标准库中的subprocess模块来fork一个子进程，并运行一个外部的程序（类似于在linux中fork一个子进程，然后在子进程中exec另外一个程序）。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-23T06:37:13.968Z">
+<meta property="og:updated_time" content="2018-07-23T07:14:19.138Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="subprocess-call, check_call, check_output, Popen">
 <meta name="twitter:description" content="在Python中，我们通过使用标准库中的subprocess模块来fork一个子进程，并运行一个外部的程序（类似于在linux中fork一个子进程，然后在子进程中exec另外一个程序）。">
@@ -399,7 +399,7 @@
                 
               
 
-              <time title="创建时间：2018-07-23 13:59:15 / 修改时间：14:37:13" itemprop="dateCreated datePublished" datetime="2018-07-23T13:59:15+08:00">2018-07-23</time>
+              <time title="创建时间：2018-07-23 13:59:15 / 修改时间：15:14:19" itemprop="dateCreated datePublished" datetime="2018-07-23T13:59:15+08:00">2018-07-23</time>
             
 
             
@@ -507,9 +507,9 @@
 <li>Popen.<strong>send_signal</strong>(signal)：向子进程发送信号</li>
 <li>Popen.<strong>terminate</strong>()：停止(stop)子进程。在windows平台下，该方法将调用Windows API TerminateProcess（）来结束子进程</li>
 <li>Popen.<strong>kill</strong>()：杀死子进程</li>
-<li>Popen.<strong>stdin</strong>：如果在创建Popen对象是，参数stdin被设置为PIPE，Popen.stdin将返回一个文件对象用于策子进程发送指令；否则返回None</li>
-<li>Popen.<strong>stdout</strong>：如果在创建Popen对象是，参数stdout被设置为PIPE，Popen.stdout将返回一个文件对象用于策子进程发送指令；否则返回None</li>
-<li>Popen.<strong>stderr</strong>：如果在创建Popen对象是，参数stdout被设置为PIPE，Popen.stdout将返回一个文件对象用于策子进程发送指令；否则返回None</li>
+<li>Popen.<strong>stdin</strong>：如果在创建Popen对象时，参数stdin被设置为PIPE，Popen.stdin将返回一个文件对象用于向子进程发送指令；否则返回None</li>
+<li>Popen.<strong>stdout</strong>：如果在创建Popen对象时，参数stdout被设置为PIPE，Popen.stdout将返回一个文件对象用于向子进程发送指令；否则返回None</li>
+<li>Popen.<strong>stderr</strong>：如果在创建Popen对象时，参数stderr被设置为PIPE，Popen.stderr将返回一个文件对象用于向子进程发送指令；否则返回None</li>
 <li>Popen.<strong>pid</strong>：获取子进程的进程ID</li>
 <li>Popen.<strong>returncode</strong>：获取进程的返回值。如果进程还没有结束，返回None</li>
 </ol>
