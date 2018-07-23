@@ -135,7 +135,7 @@
 <meta property="og:site_name" content="Moz的博客">
 <meta property="og:description" content="在Python中，我们通过使用标准库中的subprocess模块来fork一个子进程，并运行一个外部的程序（类似于在linux中fork一个子进程，然后在子进程中exec另外一个程序）。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-23T07:14:19.138Z">
+<meta property="og:updated_time" content="2018-07-23T07:22:57.228Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="subprocess-call, check_call, check_output, Popen">
 <meta name="twitter:description" content="在Python中，我们通过使用标准库中的subprocess模块来fork一个子进程，并运行一个外部的程序（类似于在linux中fork一个子进程，然后在子进程中exec另外一个程序）。">
@@ -399,7 +399,7 @@
                 
               
 
-              <time title="创建时间：2018-07-23 13:59:15 / 修改时间：15:14:19" itemprop="dateCreated datePublished" datetime="2018-07-23T13:59:15+08:00">2018-07-23</time>
+              <time title="创建时间：2018-07-23 13:59:15 / 修改时间：15:22:57" itemprop="dateCreated datePublished" datetime="2018-07-23T13:59:15+08:00">2018-07-23</time>
             
 
             
@@ -516,8 +516,10 @@
 </blockquote>
 </li>
 </ol>
+<p>需要注意的是，在使用<code>Popen.wait()</code>方法等待子程序完成时，如果<code>stdout</code>或者<code>stderr</code>设置了<code>PIPE</code>，那么当子进程的输出超过操作系统的pipe size时，会<a href="https://docs.python.org/release/2.7.3/library/subprocess.html#subprocess.Popen.wait" target="_blank" rel="noopener">导致死锁</a>的情况。所以官方建议使用<code>Popen.communicate()</code>方法，因为子进程的输出是直接写入系统内存空间，一般不会超出内存上限。</p>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol>
 <li><a href="https://blog.csdn.net/yuchen1986/article/details/22059873" target="_blank" rel="noopener">subprocess模块学习-call, checkall, check_output, Popen</a></li>
+<li><a href="https://blog.csdn.net/carolzhang8406/article/details/22286913" target="_blank" rel="noopener">Popen communicate() 和wait()使用上的区别</a></li>
 </ol>
 
       
