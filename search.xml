@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>subprocess-call, check_call, check_output, Popen</title>
+      <link href="/2018/07/23/py-subprocess/"/>
+      <url>/2018/07/23/py-subprocess/</url>
+      <content type="html"><![CDATA[<p>在Python中，我们通过使用标准库中的subprocess模块来fork一个子进程，并运行一个外部的程序（类似于在linux中fork一个子进程，然后在子进程中exec另外一个程序）。 </p><a id="more"></a><p>这一模块中提供了多种方法：</p><h3 id="call"><a href="#call" class="headerlink" title="call"></a>call</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">subprocess.call(args, *, stdin=<span class="keyword">None</span>, stdout=<span class="keyword">None</span>, stderr=<span class="keyword">None</span>, shell=<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure><ol><li>参数args描述了子进程中需要执行的命令；</li><li><strong>父进程会等待子进程的结束</strong>，并获得call函数的返回值</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"></span><br><span class="line">cmd = [<span class="string">'ls'</span>, <span class="string">'-l];</span></span><br><span class="line"><span class="string">ret = subprocess.call(cmd)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">cmd = ['</span>exit <span class="number">1</span><span class="string">'];</span></span><br><span class="line"><span class="string">ret = subprocess.call(cmd, shell=True);</span></span><br></pre></td></tr></table></figure><ol start="3"><li>如果子进程不需要进行交互,就可以使用该函数来创建</li></ol><h3 id="check-call"><a href="#check-call" class="headerlink" title="check_call"></a>check_call</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">subprocess.check_call(args, *, stdin=<span class="keyword">None</span>, stdout=<span class="keyword">None</span>, stderr=<span class="keyword">None</span>, shell=<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure><ol><li>check_call()与call()唯一的区别在于返回值。如果args执行之后的返回值为0，那么check_all返回0；如果返回值不为0，那么将raise出来一个CalledProcessError </li></ol><h3 id="check-output"><a href="#check-output" class="headerlink" title="check_output"></a>check_output</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">subprocess.check_output(args, *, stdin=<span class="keyword">None</span>, stderr=<span class="keyword">None</span>, shell=<span class="keyword">False</span>, universal_newlines=<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure><ol><li>子进程执行args中的命令，并将其输出形成字符串返回</li><li>如果返回值非零，那么将raise一个CalledProcessError。这一对象实例中有returncode属性以及output属性（args命令的output）</li></ol><h3 id="Popen"><a href="#Popen" class="headerlink" title="Popen"></a>Popen</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">subprocess.Popen(args, bufsize=<span class="number">0</span>, executable=<span class="keyword">None</span>, stdin=<span class="keyword">None</span>, stdout=<span class="keyword">None</span>, stderr=<span class="keyword">None</span>, preexec_fn=<span class="keyword">None</span>, close_fds=<span class="keyword">False</span>, shell=<span class="keyword">False</span>, cwd=<span class="keyword">None</span>, env=<span class="keyword">None</span>, universal_newlines=<span class="keyword">False</span>, startupinfo=<span class="keyword">None</span>, creationflags=<span class="number">0</span>)</span><br></pre></td></tr></table></figure><ol><li><p>Popen对象创建后，<strong>主程序不会自动等待子进程完成</strong>。我们必须调用对象的wait()方法，父进程才会等待 (也就是阻塞block) </p></li><li><p>Popen中封装的其他函数 ：</p><blockquote><ol><li>Popen.<strong>poll</strong>()：检查子进程的状态，查看子进程是否结束</li><li>Popen.<strong>wait</strong>()：等待子进程的结束</li><li>Popen.<strong>communicate</strong>(input=None)：与子进程进行交互。向stdin发送数据，或从stdout和stderr中读取数据。可选参数input指定发送到子进程的参数。Communicate()返回一个元组：(stdoutdata, stderrdata)。注意：如果希望通过进程的stdin向其发送数据，在创建Popen对象的时候，参数stdin必须被设置为PIPE。同样，如果希望从stdout和stderr获取数据，必须将stdout和stderr设置为PIPE。</li><li>Popen.<strong>send_signal</strong>(signal)：向子进程发送信号</li><li>Popen.<strong>terminate</strong>()：停止(stop)子进程。在windows平台下，该方法将调用Windows API TerminateProcess（）来结束子进程</li><li>Popen.<strong>kill</strong>()：杀死子进程</li><li>Popen.<strong>stdin</strong>：如果在创建Popen对象是，参数stdin被设置为PIPE，Popen.stdin将返回一个文件对象用于策子进程发送指令；否则返回None</li><li>Popen.<strong>stdout</strong>：如果在创建Popen对象是，参数stdout被设置为PIPE，Popen.stdout将返回一个文件对象用于策子进程发送指令；否则返回None</li><li>Popen.<strong>stderr</strong>：如果在创建Popen对象是，参数stdout被设置为PIPE，Popen.stdout将返回一个文件对象用于策子进程发送指令；否则返回None</li><li>Popen.<strong>pid</strong>：获取子进程的进程ID</li><li>Popen.<strong>returncode</strong>：获取进程的返回值。如果进程还没有结束，返回None</li></ol></blockquote></li></ol><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol><li><a href="https://blog.csdn.net/yuchen1986/article/details/22059873" target="_blank" rel="noopener">subprocess模块学习-call, checkall, check_output, Popen</a></li></ol>]]></content>
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> subprocess </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Python有GIL，为什么还需要线程同步</title>
       <link href="/2018/07/11/python-GIL-multithreading-lock/"/>
       <url>/2018/07/11/python-GIL-multithreading-lock/</url>
@@ -11,8 +32,6 @@
       <categories>
           
           <category> Python </category>
-          
-          <category> 你不知道的Python </category>
           
       </categories>
       
@@ -222,8 +241,6 @@
           
           <category> Python </category>
           
-          <category> 你不知道的Python </category>
-          
       </categories>
       
       
@@ -404,9 +421,9 @@
       
         <tags>
             
-            <tag> 链表 </tag>
-            
             <tag> 堆 </tag>
+            
+            <tag> 链表 </tag>
             
         </tags>
       

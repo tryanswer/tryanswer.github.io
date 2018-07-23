@@ -4,8 +4,52 @@
 
     
   <url>
+    <loc>https://tryanswer.github.io/2018/07/23/py-subprocess/</loc>
+    <lastmod>2018-07-23T06:37:13.968Z</lastmod>
+    <data>
+        <display>
+        <title>subprocess-call, check_call, check_output, Popen</title>
+        <pubTime>2018-07-23T05:59:15.000Z</pubTime>
+        
+        <tag>subprocess</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://tryanswer.github.io/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://tryanswer.github.io/2018/05/17/py-int-confusing/</loc>
+    <lastmod>2018-07-23T06:03:55.177Z</lastmod>
+    <data>
+        <display>
+        <title>Python 小整数与大整数的处理机制以及整体解释与逐行解释的区别</title>
+        <pubTime>2018-05-17T14:25:10.000Z</pubTime>
+        
+        <tag>小整数</tag>
+         
+        <tag>大整数</tag>
+         
+        <tag>整数缓存</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://tryanswer.github.io/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tryanswer.github.io/2018/07/11/python-GIL-multithreading-lock/</loc>
-    <lastmod>2018-07-11T03:33:21.260Z</lastmod>
+    <lastmod>2018-07-23T06:03:42.525Z</lastmod>
     <data>
         <display>
         <title>Python有GIL，为什么还需要线程同步</title>
@@ -21,9 +65,6 @@
            
              
               <breadCrumb title="Python" url="https://tryanswer.github.io/categories/Python/"/>
-          
-             
-              <breadCrumb title="你不知道的Python" url="https://tryanswer.github.io/categories/Python/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Python/"/>
           
         </display>
     </data>
@@ -212,33 +253,6 @@
 
     
   <url>
-    <loc>https://tryanswer.github.io/2018/05/17/py-int-confusing/</loc>
-    <lastmod>2018-05-23T05:00:24.478Z</lastmod>
-    <data>
-        <display>
-        <title>Python 小整数与大整数的处理机制以及整体解释与逐行解释的区别</title>
-        <pubTime>2018-05-17T14:25:10.000Z</pubTime>
-        
-        <tag>小整数</tag>
-         
-        <tag>大整数</tag>
-         
-        <tag>整数缓存</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tryanswer.github.io/categories/Python/"/>
-          
-             
-              <breadCrumb title="你不知道的Python" url="https://tryanswer.github.io/categories/Python/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://tryanswer.github.io/2018/04/13/n23-merge-k-sorted-lists/</loc>
     <lastmod>2018-05-20T12:56:11.852Z</lastmod>
     <data>
@@ -246,9 +260,9 @@
         <title>LeetCode23 合并K个有序链表</title>
         <pubTime>2018-04-13T13:29:53.000Z</pubTime>
         
-        <tag>链表</tag>
-         
         <tag>堆</tag>
+         
+        <tag>链表</tag>
          
          
            

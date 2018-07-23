@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tryanswer.github.io/2018/07/23/py-subprocess/</loc>
+    
+    <lastmod>2018-07-23T06:37:13.968Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tryanswer.github.io/2018/05/17/py-int-confusing/</loc>
+    
+    <lastmod>2018-07-23T06:03:55.177Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tryanswer.github.io/2018/07/11/python-GIL-multithreading-lock/</loc>
     
-    <lastmod>2018-07-11T03:33:21.260Z</lastmod>
+    <lastmod>2018-07-23T06:03:42.525Z</lastmod>
     
   </url>
   
@@ -54,13 +68,6 @@
     <loc>https://tryanswer.github.io/2018/05/24/scala-implicit/</loc>
     
     <lastmod>2018-05-25T03:08:04.058Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tryanswer.github.io/2018/05/17/py-int-confusing/</loc>
-    
-    <lastmod>2018-05-23T05:00:24.478Z</lastmod>
     
   </url>
   
