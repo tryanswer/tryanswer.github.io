@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tryanswer.github.io/2018/05/25/graph-analysis/</loc>
+    
+    <lastmod>2018-07-26T13:39:02.098Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tryanswer.github.io/2018/07/23/py-subprocess/</loc>
     
     <lastmod>2018-07-23T07:22:57.228Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://tryanswer.github.io/2018/07/11/py-GIL-multithreading-lock/</loc>
     
     <lastmod>2018-07-23T06:03:42.525Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tryanswer.github.io/2018/05/25/graph-analysis/</loc>
-    
-    <lastmod>2018-07-11T03:05:49.753Z</lastmod>
     
   </url>
   

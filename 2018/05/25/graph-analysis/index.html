@@ -135,7 +135,7 @@
 <meta property="og:site_name" content="Moz的博客">
 <meta property="og:description" content="图分析是知识图谱（Knowledge Graph）图结构消费的重要组成部分，基于图分析算法的应用近年来层出不穷，比如：Palantir利用关联分析指导复杂战场环境下的军事行动、天眼查发现企业关联关系、拓尔思水晶球、宜信金融反欺诈等等。 本文首先对图分析算法进行归纳总结，后期将结合现有的工具，详细介绍图分析每个算法的实现以及应用案例。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-11T03:05:49.753Z">
+<meta property="og:updated_time" content="2018-07-26T13:39:02.098Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图分析总结">
 <meta name="twitter:description" content="图分析是知识图谱（Knowledge Graph）图结构消费的重要组成部分，基于图分析算法的应用近年来层出不穷，比如：Palantir利用关联分析指导复杂战场环境下的军事行动、天眼查发现企业关联关系、拓尔思水晶球、宜信金融反欺诈等等。 本文首先对图分析算法进行归纳总结，后期将结合现有的工具，详细介绍图分析每个算法的实现以及应用案例。">
@@ -416,7 +416,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-07-11 11:05:49" itemprop="dateModified" datetime="2018-07-11T11:05:49+08:00">2018-07-11</time>
+                <time title="修改时间：2018-07-26 21:39:02" itemprop="dateModified" datetime="2018-07-26T21:39:02+08:00">2018-07-26</time>
               
             
           </span>
@@ -612,7 +612,7 @@
 <tr>
 <td>基于谱分析的社团发现</td>
 <td>将节点对应的矩阵特征分量看<br>成空间坐标，将网络节点映射<br>到多维向量空间，运用传统的<br>聚类算法将他们聚集成社团</td>
-<td></td>
+<td>-</td>
 </tr>
 <tr>
 <td>基于信息论的社团发现</td>
@@ -681,17 +681,17 @@
 <tbody>
 <tr>
 <td>AGM/AcGM</td>
-<td></td>
+<td>-</td>
 <td><a href="https://pdfs.semanticscholar.org/33b8/3cf4471905abf2bb08e0e9cfef8c85d6bcc6.pdf" target="_blank" rel="noopener">AGM</a></td>
 </tr>
 <tr>
 <td>FSG</td>
-<td></td>
+<td>-</td>
 <td><a href="/resources/Frequent_Subgraph_Discovery.pdf">FSG</a></td>
 </tr>
 <tr>
 <td>FFSM</td>
-<td></td>
+<td>-</td>
 <td><a href="https://pdfs.semanticscholar.org/e45a/1cae5d7a9057263fec5c96d9659a7962a7bc.pdf" target="_blank" rel="noopener">FFSM1</a> <br><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.582.8488&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">FFSM2</a></td>
 </tr>
 </tbody>
@@ -710,22 +710,22 @@
 <tbody>
 <tr>
 <td>Subdue</td>
-<td>基于最小描述长度原则 <strong>MDL</strong>来发现子结构<br>- 定义：$S$是图$G​$的一个子结构，$I(S)​$表示子结构$S​$的描述长度，$I(G&#124;S)​$表示在图$G​$中使用单个顶点替换子结构$S​$后得到的图的描述长度<br><br>- 寻找最优子结构：使得$I(S) = v\ bits + r\ bits + e\ bits​$最小的子结构$S​$，$S​$即为频繁子图。<br>其中$v\ bits​$表示表示编码图的顶点标签所需的$bit​$位数：<br>$$v\ bits = lg\ v + v\ lg\ l_u​$$<br>$r\ bits​$表示编码邻接矩阵$A​$的各行所需的$bit​$位数：<br>$$r\ bits = lg(b+1) + \sum_{i=0}^v lg(b+1) \ +lg\ C(v,k_i)​$$ <br>其中$b=max_ik_i​$，$k_i​$表示邻接矩阵$A​$第$i​$行中为$1​$的个数<br>$e\ bits​$表示编码邻接矩阵$A​$中以$A[i,j]=1​$所表示的边所需的$bit​$位数：<br>$$e\ bits=lg\ m\  +\ \sum_{i=1}^{v}\sum_{j=1}^{v} lg\ m + e(i,j)[1+lg\ l_u]​$$<br><br>- 过程：初始枚举单节点最优子结构，然后由此进行迭代。在每次迭代中，算法选择最优子结构后，通过增加一个顶点扩展当前子结构，直到所有的最优子结构都被列出或者所需考虑的候选最优子结构数量达到一定限制</td>
+<td>基于最小描述长度原则 <strong>MDL</strong>来发现子结构<br>- 定义：$S$是图$G$的一个子结构，$I(S)​$表示子结构$S​$的描述长度，$I(G&#124;S)​$表示在图$G​$中使用单个顶点替换子结构$S​$后得到的图的描述长度<br><br>- 寻找最优子结构：使得$I(S) = v\ bits + r\ bits + e\ bits​$最小的子结构$S​$，$S​$即为频繁子图。<br>其中$v\ bits​$表示表示编码图的顶点标签所需的$bit​$位数：<br>$$v\ bits = lg\ v + v\ lg\ l_u​$$<br>$r\ bits​$表示编码邻接矩阵$A​$的各行所需的$bit​$位数：<br>$$r\ bits = lg(b+1) + \sum_{i=0}^v lg(b+1) \ +lg\ C(v,k_i)​$$ <br>其中$b=max_ik_i​$，$k_i​$表示邻接矩阵$A​$第$i​$行中为$1​$的个数<br>$e\ bits​$表示编码邻接矩阵$A​$中以$A[i,j]=1​$所表示的边所需的$bit​$位数：<br>$$e\ bits=lg\ m\  +\ \sum_{i=1}^{v}\sum_{j=1}^{v} lg\ m + e(i,j)[1+lg\ l_u]​$$<br><br>- 过程：初始枚举单节点最优子结构，然后由此进行迭代。在每次迭代中，算法选择最优子结构后，通过增加一个顶点扩展当前子结构，直到所有的最优子结构都被列出或者所需考虑的候选最优子结构数量达到一定限制</td>
 <td><a href="http://ailab.wsu.edu/subdue/papers/HolderAAAI-KDD94.pdf" target="_blank" rel="noopener">SUBDUE</a></td>
 </tr>
 <tr>
 <td>gSpan</td>
-<td></td>
+<td>-</td>
 <td><a href="https://www.cs.ucsb.edu/~xyan/software/gSpan.htm" target="_blank" rel="noopener">Xifeng Yan网站</a></td>
 </tr>
 <tr>
 <td>Gaston</td>
-<td></td>
+<td>-</td>
 <td><a href="http://liacs.leidenuniv.nl/~nijssensgr/gaston/documentation.html" target="_blank" rel="noopener">Gaston网站</a></td>
 </tr>
 <tr>
 <td>CMTreeMiner</td>
-<td></td>
+<td>-</td>
 <td><a href="https://pdfs.semanticscholar.org/ae20/abcf31a472f72aaf4b5332c759f668f29075.pdf" target="_blank" rel="noopener">CMTreeMiner</a></td>
 </tr>
 </tbody>
@@ -751,16 +751,17 @@
 <tr>
 <td>基于局部信息的相似指标</td>
 <td>- 共同邻居 （CN）</td>
-<td></td>
+<td>-</td>
 </tr>
 <tr>
 <td>基于路径的相似性指标</td>
-<td></td>
-<td></td>
+<td>-</td>
+<td>-</td>
 </tr>
 <tr>
 <td>基于随机游走的相似性指标</td>
-<td></td>
+<td>-</td>
+<td>-</td>
 </tr>
 </tbody>
 </table>
@@ -781,12 +782,13 @@
 <tbody>
 <tr>
 <td>概率关系模型 PRMs</td>
-<td></td>
-<td></td>
+<td>-</td>
+<td>-</td>
 </tr>
 <tr>
 <td>有向无环概率实体关系模型 DAPER</td>
-<td></td>
+<td>-</td>
+<td>-</td>
 </tr>
 </tbody>
 </table>
@@ -807,12 +809,13 @@
 <tbody>
 <tr>
 <td>层次结构模型</td>
-<td></td>
-<td></td>
+<td>-</td>
+<td>-</td>
 </tr>
 <tr>
 <td>随机分块模型</td>
-<td></td>
+<td>-</td>
+<td>-</td>
 </tr>
 </tbody>
 </table>
