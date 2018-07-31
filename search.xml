@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>Thrift 使用指南</title>
+      <link href="/2018/07/31/thrift-guide/"/>
+      <url>/2018/07/31/thrift-guide/</url>
+      <content type="html"><![CDATA[<p><a href="https://diwakergupta.github.io/thrift-missing-guide/#_resources" target="_blank" rel="noopener">Thrift: The Missing Guide</a></p>]]></content>
+      
+      <categories>
+          
+          <category> Rpc </category>
+          
+          <category> thrift </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> thrift </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>subprocess-call, check_call, check_output, Popen</title>
       <link href="/2018/07/23/py-subprocess/"/>
       <url>/2018/07/23/py-subprocess/</url>

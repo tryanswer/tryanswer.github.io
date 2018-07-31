@@ -4,6 +4,29 @@
 
     
   <url>
+    <loc>https://tryanswer.github.io/2018/07/31/thrift-guide/</loc>
+    <lastmod>2018-07-31T15:29:34.152Z</lastmod>
+    <data>
+        <display>
+        <title>Thrift 使用指南</title>
+        <pubTime>2018-07-31T15:27:43.000Z</pubTime>
+        
+        <tag>thrift</tag>
+         
+         
+           
+             
+              <breadCrumb title="Rpc" url="https://tryanswer.github.io/categories/Rpc/"/>
+          
+             
+              <breadCrumb title="thrift" url="https://tryanswer.github.io/categories/Rpc/thrift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tryanswer.github.io/2018/05/25/graph-analysis/</loc>
     <lastmod>2018-07-26T13:39:02.098Z</lastmod>
     <data>
