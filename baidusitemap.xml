@@ -4,6 +4,34 @@
 
     
   <url>
+    <loc>https://tryanswer.github.io/2018/08/03/py-pipe-buffer-size/</loc>
+    <lastmod>2018-08-03T04:33:56.524Z</lastmod>
+    <data>
+        <display>
+        <title>linux环境下如何修改PIPE BUFFER SIZE</title>
+        <pubTime>2018-08-03T04:31:25.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>pipe</tag>
+         
+        <tag>buffer size</tag>
+         
+        <tag>管道</tag>
+         
+        <tag>管道大小</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="https://tryanswer.github.io/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tryanswer.github.io/2018/07/31/thrift-guide/</loc>
     <lastmod>2018-07-31T15:29:34.152Z</lastmod>
     <data>
