@@ -4,24 +4,24 @@
 
     
   <url>
-    <loc>https://tryanswer.github.io/2018/08/18/n41-first-missing-positive/</loc>
-    <lastmod>2018-08-18T15:32:47.871Z</lastmod>
+    <loc>https://tryanswer.github.io/2018/08/26/book-the-unlikely-pilgrimage-of-harold-fry/</loc>
+    <lastmod>2018-08-28T03:34:45.870Z</lastmod>
     <data>
         <display>
-        <title>LeetCode41 缺失的第一个正数</title>
-        <pubTime>2018-08-18T14:42:29.000Z</pubTime>
+        <title>一个人的朝圣</title>
+        <pubTime>2018-08-26T12:45:41.000Z</pubTime>
         
-        <tag>数组</tag>
+        <tag>朝圣</tag>
          
-        <tag>最小正整数</tag>
+        <tag>哈罗德</tag>
          
          
            
              
-              <breadCrumb title="算法" url="https://tryanswer.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+              <breadCrumb title="读书" url="https://tryanswer.github.io/categories/%E8%AF%BB%E4%B9%A6/"/>
           
              
-              <breadCrumb title="LeetCode" url="https://tryanswer.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+              <breadCrumb title="小说" url="https://tryanswer.github.io/categories/%E8%AF%BB%E4%B9%A6/%E5%B0%8F%E8%AF%B4/"/>
           
         </display>
     </data>
@@ -30,7 +30,7 @@
     
   <url>
     <loc>https://tryanswer.github.io/2018/08/03/py-pipe-buffer-size/</loc>
-    <lastmod>2018-08-03T04:33:56.524Z</lastmod>
+    <lastmod>2018-08-26T14:42:16.521Z</lastmod>
     <data>
         <display>
         <title>linux环境下如何修改PIPE BUFFER SIZE</title>
@@ -49,7 +49,7 @@
          
            
              
-              <breadCrumb title="python" url="https://tryanswer.github.io/categories/python/"/>
+              <breadCrumb title="Python" url="https://tryanswer.github.io/categories/Python/"/>
           
         </display>
     </data>
@@ -58,7 +58,7 @@
     
   <url>
     <loc>https://tryanswer.github.io/2018/07/31/thrift-guide/</loc>
-    <lastmod>2018-07-31T15:29:34.152Z</lastmod>
+    <lastmod>2018-08-26T14:41:44.336Z</lastmod>
     <data>
         <display>
         <title>Thrift 使用指南</title>
@@ -69,10 +69,38 @@
          
            
              
-              <breadCrumb title="Rpc" url="https://tryanswer.github.io/categories/Rpc/"/>
+              <breadCrumb title="网络编程" url="https://tryanswer.github.io/categories/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
           
              
-              <breadCrumb title="thrift" url="https://tryanswer.github.io/categories/Rpc/thrift/"/>
+              <breadCrumb title="RPC" url="https://tryanswer.github.io/categories/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/RPC/"/>
+          
+             
+              <breadCrumb title="thrift" url="https://tryanswer.github.io/categories/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/RPC/thrift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://tryanswer.github.io/2018/08/18/n41-first-missing-positive/</loc>
+    <lastmod>2018-08-18T15:32:47.871Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode41 缺失的第一个正数</title>
+        <pubTime>2018-08-18T14:42:29.000Z</pubTime>
+        
+        <tag>数组</tag>
+         
+        <tag>最小正整数</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="https://tryanswer.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="https://tryanswer.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
           
         </display>
     </data>
@@ -289,9 +317,9 @@
         <title>LeetCode32 最长有效括号</title>
         <pubTime>2018-05-25T14:26:11.000Z</pubTime>
         
-        <tag>栈</tag>
-         
         <tag>动态规划</tag>
+         
+        <tag>栈</tag>
          
          
            

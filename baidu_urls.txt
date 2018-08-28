@@ -1,3 +1,4 @@
+https://tryanswer.github.io/2018/08/26/book-the-unlikely-pilgrimage-of-harold-fry/
 https://tryanswer.github.io/2018/08/18/n41-first-missing-positive/
 https://tryanswer.github.io/2018/08/03/py-pipe-buffer-size/
 https://tryanswer.github.io/2018/07/31/thrift-guide/
@@ -7,4 +8,3 @@ https://tryanswer.github.io/2018/06/15/n39-combination-sum/
 https://tryanswer.github.io/2018/06/04/n36-valid-sudoku/
 https://tryanswer.github.io/2018/06/02/n375-guess-number-higher-or-lower-ii/
 https://tryanswer.github.io/2018/05/30/scala-underscore/
-https://tryanswer.github.io/2018/05/25/n32-longest-valid-parentheses/
