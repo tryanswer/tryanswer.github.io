@@ -4,6 +4,35 @@
 
     
   <url>
+    <loc>https://tryanswer.github.io/2018/08/30/book-ferryman/</loc>
+    <lastmod>2018-08-30T14:06:25.188Z</lastmod>
+    <data>
+        <display>
+        <title>摆渡人</title>
+        <pubTime>2018-08-30T09:21:50.000Z</pubTime>
+        
+        <tag>爱情</tag>
+         
+        <tag>救赎</tag>
+         
+        <tag>迪伦</tag>
+         
+        <tag>崔斯坦</tag>
+         
+         
+           
+             
+              <breadCrumb title="读书" url="https://tryanswer.github.io/categories/%E8%AF%BB%E4%B9%A6/"/>
+          
+             
+              <breadCrumb title="小说" url="https://tryanswer.github.io/categories/%E8%AF%BB%E4%B9%A6/%E5%B0%8F%E8%AF%B4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tryanswer.github.io/2018/08/26/book-the-unlikely-pilgrimage-of-harold-fry/</loc>
     <lastmod>2018-08-28T03:34:45.870Z</lastmod>
     <data>
@@ -317,9 +346,9 @@
         <title>LeetCode32 最长有效括号</title>
         <pubTime>2018-05-25T14:26:11.000Z</pubTime>
         
-        <tag>动态规划</tag>
-         
         <tag>栈</tag>
+         
+        <tag>动态规划</tag>
          
          
            
