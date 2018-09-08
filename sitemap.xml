@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tryanswer.github.io/2018/09/08/n42-trapping-rain-water/</loc>
+    
+    <lastmod>2018-09-08T03:27:13.634Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tryanswer.github.io/2018/08/18/n41-first-missing-positive/</loc>
+    
+    <lastmod>2018-09-08T03:11:20.573Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tryanswer.github.io/2018/08/30/book-ferryman/</loc>
     
     <lastmod>2018-08-30T14:20:06.680Z</lastmod>
@@ -26,13 +40,6 @@
     <loc>https://tryanswer.github.io/2018/07/31/thrift-guide/</loc>
     
     <lastmod>2018-08-26T14:41:44.336Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tryanswer.github.io/2018/08/18/n41-first-missing-positive/</loc>
-    
-    <lastmod>2018-08-18T15:32:47.871Z</lastmod>
     
   </url>
   

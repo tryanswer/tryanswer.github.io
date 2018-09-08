@@ -1,3 +1,4 @@
+https://tryanswer.github.io/2018/09/08/n42-trapping-rain-water/
 https://tryanswer.github.io/2018/08/30/book-ferryman/
 https://tryanswer.github.io/2018/08/26/book-the-unlikely-pilgrimage-of-harold-fry/
 https://tryanswer.github.io/2018/08/18/n41-first-missing-positive/
@@ -7,4 +8,3 @@ https://tryanswer.github.io/2018/07/23/py-subprocess/
 https://tryanswer.github.io/2018/07/11/py-GIL-multithreading-lock/
 https://tryanswer.github.io/2018/06/15/n39-combination-sum/
 https://tryanswer.github.io/2018/06/04/n36-valid-sudoku/
-https://tryanswer.github.io/2018/06/02/n375-guess-number-higher-or-lower-ii/
